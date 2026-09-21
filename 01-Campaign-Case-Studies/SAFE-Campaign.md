@@ -189,3 +189,44 @@ My responsibilities included:
 SAFE demonstrated an integrated approach to student acquisition by combining digital marketing, influencer marketing, campus outreach, WhatsApp communication, and offline events into a single acquisition funnel.
 
 The campaign strengthened the connection between study-abroad awareness, scholarship discovery, and education-finance assistance.
+
+## Results & Impact
+
+| Metric | Result |
+|---|---:|
+| Registration Target | 8,000 |
+| Registrations Generated | 11,900 |
+| Target Achievement | 148.75% |
+| Registrations Above Target | 3,900 |
+| Event Attendees | 6,000+ |
+| Leads Generated | 12,000+ |
+| Sanctions / Conversions | 550+ |
+| Campaign Budget | ₹50,00,000 |
+| Campaign Period | 4 months |
+| Cities | 8 |
+
+### Key Outcomes
+
+- Generated **11,900 registrations** against a target of 8,000.
+- Achieved **148.75% of the registration target**.
+- Exceeded the registration target by **3,900 registrations**.
+- Generated **6,000+ event attendees** across the campaign.
+- Generated **12,000+ leads** through the campaign ecosystem.
+- Contributed to **550+ sanctions/conversions**.
+- Executed the campaign across **8 cities** within a **4-month period**.
+- Managed activity against a total campaign budget of **₹50 lakh**.
+
+## Geographic Execution
+
+SAFE was executed across multiple student markets:
+
+- Bangalore
+- Hyderabad
+- Mumbai
+- Delhi
+- Chennai
+- Vijayawada
+- Kozhikode
+- Kochi
+
+The multi-city approach enabled the campaign to reach students across different regional study-abroad markets while creating opportunities for both digital acquisition and offline engagement.
