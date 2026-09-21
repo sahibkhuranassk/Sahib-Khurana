@@ -149,18 +149,49 @@ Continue communication with relevant students after the event for counselling an
 
 ## My Role
 
-My responsibilities included:
+### Marketing & Campaign Management
 
-- Campaign planning and execution
-- Performance marketing coordination
-- Influencer marketing
-- Social media coordination
-- WhatsApp marketing
-- Campus acquisition
-- Creative and content coordination
-- Lead-generation strategy
-- Cross-team coordination
-- Campaign tracking and optimisation
+I was involved in planning and executing the marketing ecosystem supporting SAFE across digital and offline acquisition channels.
+
+### Key Contributions
+
+- Supported the planning and execution of the SAFE multi-city campaign.
+- Coordinated marketing activities across **8 cities**.
+- Worked across performance marketing and digital acquisition.
+- Managed influencer-led promotion and creator coordination.
+- Supported WhatsApp and email communication for registrations and reminders.
+- Coordinated social media content and campaign communication.
+- Supported campus and student-community outreach.
+- Worked on lead-generation initiatives and registration campaigns.
+- Supported pre-event communication and student engagement.
+- Coordinated with internal teams involved in campaign execution.
+- Contributed to post-registration and post-event lead follow-up processes.
+- Monitored campaign performance and supported optimisation across acquisition channels.
+
+### Campaign Execution
+
+The campaign required coordination across multiple stages:
+
+```text
+Campaign Planning
+       ↓
+Multi-City Promotion
+       ↓
+Digital Acquisition
+       ↓
+Influencer & Campus Outreach
+       ↓
+Registration
+       ↓
+Pre-Event Communication
+       ↓
+Event Attendance
+       ↓
+Lead Generation
+       ↓
+Post-Event Follow-up
+       ↓
+Conversion
 
 ## Key Marketing Channels
 
