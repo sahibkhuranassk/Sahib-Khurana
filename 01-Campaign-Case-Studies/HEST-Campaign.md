@@ -130,27 +130,6 @@ Key learnings:
 
 ## My Role
 
-I was involved in the campaign across strategy, execution and growth.
-
-Responsibilities included:
-
-- Campaign strategy
-- Performance marketing coordination
-- Influencer marketing
-- Campus Delegate strategy
-- WhatsApp marketing
-- Social media coordination
-- Creative direction
-- Lead-generation initiatives
-- AI calling and lead qualification
-- Campaign tracking and optimisation
-
-- ## My Role
-
-### Marketing & Growth Lead
-
-I was responsible for planning, coordinating, and executing multiple acquisition initiatives supporting HEST, working across digital, influencer, campus, WhatsApp, social media, CRM, and campaign operations.
-
 ### Key Contributions
 
 - Restructured the HEST marketing and acquisition approach.
