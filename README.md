@@ -10,7 +10,7 @@ My work combines **strategy, execution, experimentation, and data** to build mea
 
 ## About Me
 
-I work across the full marketing funnel — from acquisition and awareness to lead generation, nurturing, and conversion.
+I work across the full marketing funnel, from acquisition and awareness to lead generation, nurturing, and conversion.
 
 My experience includes managing and coordinating:
 
@@ -29,7 +29,7 @@ My experience includes managing and coordinating:
 
 ## Selected Impact
 
-### HEST — Study Abroad Scholarship Campaign
+### HEST - Study Abroad Scholarship Campaign
 
 **12-month campaign**
 
@@ -40,7 +40,7 @@ My experience includes managing and coordinating:
 - **₹40 lakh** campaign budget
 - Multi-channel acquisition across Meta, influencers, Campus Delegates, WhatsApp/email, organic/social, and other sources
 
-### SAFE — Study Abroad Funding Expo
+### SAFE - Study Abroad Funding Expo
 
 **4-month campaign**
 
