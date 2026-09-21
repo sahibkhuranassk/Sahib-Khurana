@@ -1,1 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Sahib Khurana | Marketing & Growth</title>
+
+    <meta name="description" content="Sahib Khurana — Marketing, Growth, Performance, GTM and Automation.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7faf9;
+            color: #102a2a;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(247, 250, 249, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #dce8e6;
+        }
+
+        .nav-inner {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #00a896;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #00a896;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 110px 0 100px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(0,168,150,0.12), transparent 30%),
+                linear-gradient(180deg, #f7faf9 0%, #eef7f5 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: #008f80;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: clamp(48px, 7vw, 78px);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            margin-bottom: 26px;
+        }
+
+        h1 span {
+            color: #00a896;
+        }
+
+        .hero-description {
+            max-width: 680px;
+            color: #526766;
+            font-size: 19px;
+            margin-bottom: 34px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 13px 22px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            border: 1px solid #00a896;
+            transition: 0.2s ease;
+        }
+
+        .button-primary {
+            background: #00a896;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #008f80;
+        }
+
+        .button-secondary {
+            color: #007f72;
+        }
+
+        .button-secondary:hover {
+            background: #e1f2ef;
+        }
+
+        .hero-card {
+            background: #102a2a;
+            color: white;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(16,42,42,0.15);
+        }
+
+        .hero-card small {
+            color: #9dded6;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .hero-card h2 {
+            font-size: 25px;
+            margin: 15px 0 24px;
+        }
+
+        .hero-card p {
+            color: #c9dcda;
+            font-size: 14px;
+        }
+
+        /* SECTION */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 45px;
+        }
+
+        .section-heading span {
+            color: #00a896;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            font-size: 40px;
+            letter-spacing: -1.5px;
+            margin-top: 8px;
+        }
+
+        .section-heading p {
+            color: #627674;
+            max-width: 700px;
+            margin-top: 12px;
+        }
+
+        /* IMPACT */
+
+        .impact {
+            background: white;
+        }
+
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .impact-card {
+            padding: 28px;
+            border: 1px solid #dce8e6;
+            border-radius: 14px;
+            background: #fbfdfc;
+        }
+
+        .impact-number {
+            font-size: 38px;
+            font-weight: 800;
+            color: #00a896;
+            letter-spacing: -1px;
+        }
+
+        .impact-label {
+            font-size: 13px;
+            color: #60716f;
+            margin-top: 5px;
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .about-text {
+            color: #526766;
+            font-size: 17px;
+        }
+
+        .about-text p + p {
+            margin-top: 18px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 18px;
+            background: white;
+            border: 1px solid #dce8e6;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* CASE STUDIES */
+
+        .case-studies {
+            background: #102a2a;
+            color: white;
+        }
+
+        .case-studies .section-heading p {
+            color: #b8cecb;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .case-card {
+            padding: 30px;
+            border: 1px solid #31504d;
+            border-radius: 14px;
+            background: #153533;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-4px);
+            border-color: #00a896;
+        }
+
+        .case-card .tag {
+            color: #65d5c8;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+        }
+
+        .case-card h3 {
+            margin: 12px 0;
+            font-size: 23px;
+        }
+
+        .case-card p {
+            color: #b8cecb;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .case-link {
+            color: #65d5c8;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        /* EXPERTISE */
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .expertise-card {
+            background: white;
+            border: 1px solid #dce8e6;
+            border-radius: 14px;
+            padding: 28px;
+        }
+
+        .expertise-card h3 {
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .expertise-card p {
+            color: #627674;
+            font-size: 14px;
+        }
+
+        /* CTA */
+
+        .cta {
+            text-align: center;
+            background: #e7f4f1;
+        }
+
+        .cta h2 {
+            font-size: 44px;
+            letter-spacing: -1.5px;
+            margin-bottom: 14px;
+        }
+
+        .cta p {
+            color: #627674;
+            margin-bottom: 28px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 35px 0;
+            background: #0b2020;
+            color: #9eb5b2;
+            font-size: 13px;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 75px 0;
+            }
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .case-grid,
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero-card {
+                margin-top: 10px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+    <div class="container nav-inner">
+
+        <a href="#" class="logo">
+            Sahib<span>.</span>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#case-studies">Case Studies</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                Marketing • Growth • Performance • GTM
+            </div>
+
+            <h1>
+                Sahib<br>
+                <span>Khurana.</span>
+            </h1>
+
+            <p class="hero-description">
+                Marketing professional focused on building and scaling
+                acquisition systems across performance marketing, influencer
+                marketing, campus acquisition, CRM, social media, events and
+                growth experimentation.
+            </p>
+
+            <div class="buttons">
+                <a href="#case-studies" class="button button-primary">
+                    Explore My Work
+                </a>
+
+                <a href="#contact" class="button button-secondary">
+                    Get In Touch
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+            <small>What I Do</small>
+
+            <h2>
+                Turning marketing activity into measurable growth.
+            </h2>
+
+            <p>
+                Strategy → Acquisition → Leads → Nurturing → Conversion
+            </p>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- IMPACT -->
+
+<section class="impact" id="impact">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>Selected Impact</span>
+            <h2>Numbers that tell the story.</h2>
+            <p>
+                Selected campaign outcomes from multi-channel marketing
+                initiatives.
+            </p>
+        </div>
+
+
+        <div class="impact-grid">
+
+            <div class="impact-card">
+                <div class="impact-number">33K</div>
+                <div class="impact-label">HEST registrations generated</div>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">1,350</div>
+                <div class="impact-label">HEST sanctions</div>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">11.9K</div>
+                <div class="impact-label">SAFE registrations</div>
+            </div>
+
+            <div class="impact-card">
+                <div class="impact-number">12K+</div>
+                <div class="impact-label">SAFE leads generated</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span>About</span>
+            <h2>Marketing across the funnel.</h2>
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I work across the full marketing funnel — from awareness
+                    and acquisition to lead generation, nurturing and
+                    conversion.
+                </p>
+
+                <p>
+                    My experience combines strategic planning with hands-on
+                    execution across paid media, influencers, campus networks,
+                    WhatsApp, email, social media, CRM and events.
+                </p>
+
+                <p>
+                    I enjoy building repeatable systems that make marketing
+                    more measurable, scalable and connected to business
+                    outcomes.
+                </p>
+
+            </div>
+
+
+            <div class="skills">
+
+                <div class="skill">Growth Marketing</div>
+                <div class="skill">Performance Marketing</div>
+                <div class="skill">Influencer Marketing</div>
+                <div class="skill">Campus Acquisition</div>
+                <div class="skill">CRM & Automation</div>
+                <div class="skill">WhatsApp Marketing</div>
+                <div class="skill">Social Media</div>
+                <div class="skill">Marketing Analytics</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CASE STUDIES -->
+
+<section class="case-studies" id="case-studies">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Case Studies</span>
+
+            <h2>Selected marketing work.</h2>
+
+            <p>
+                Campaigns, acquisition systems and growth initiatives
+                documented with objectives, execution and measurable outcomes.
+            </p>
+
+        </div>
+
+
+        <div class="case-grid">
+
+
+            <a href="01-Campaign-Case-Studies/HEST-Campaign.md"
+               class="case-card">
+
+                <div class="tag">Campaign</div>
+
+                <h3>HEST Campaign</h3>
+
+                <p>
+                    Multi-channel student acquisition campaign combining
+                    scholarship-led marketing with education-finance
+                    opportunities.
+                </p>
+
+                <div class="case-link">
+                    View Case Study →
+                </div>
+
+            </a>
+
+
+            <a href="01-Campaign-Case-Studies/SAFE-Campaign.md"
+               class="case-card">
+
+                <div class="tag">Events & Acquisition</div>
+
+                <h3>SAFE Campaign</h3>
+
+                <p>
+                    Multi-city study-abroad funding campaign covering
+                    registration, event attendance, lead generation and
+                    conversion.
+                </p>
+
+                <div class="case-link">
+                    View Case Study →
+                </div>
+
+            </a>
+
+
+            <a href="01-Campaign-Case-Studies/Influencer-Marketing.md"
+               class="case-card">
+
+                <div class="tag">Influencer</div>
+
+                <h3>Influencer Marketing</h3>
+
+                <p>
+                    Creator-led acquisition strategy designed to expand
+                    student reach and generate measurable leads.
+                </p>
+
+                <div class="case-link">
+                    View Case Study →
+                </div>
+
+            </a>
+
+
+            <a href="01-Campaign-Case-Studies/WhatsApp-Marketing.md"
+               class="case-card">
+
+                <div class="tag">CRM & Community</div>
+
+                <h3>WhatsApp Marketing</h3>
+
+                <p>
+                    Community-based communication and student acquisition
+                    using WhatsApp groups and structured outreach.
+                </p>
+
+                <div class="case-link">
+                    View Case Study →
+                </div>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EXPERTISE -->
+
+<section id="expertise">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>Expertise</span>
+
+            <h2>Where I create value.</h2>
+
+        </div>
+
+
+        <div class="expertise-grid">
+
+
+            <div class="expertise-card">
+
+                <h3>Performance Marketing</h3>
+
+                <p>
+                    Paid acquisition, Meta Ads, Google Ads, PMAX,
+                    creative testing, optimisation and funnel analysis.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-card">
+
+                <h3>Growth & Acquisition</h3>
+
+                <p>
+                    Student acquisition, influencer programs, campus
+                    marketing, communities and lead-generation systems.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-card">
+
+                <h3>CRM & Lifecycle</h3>
+
+                <p>
+                    Lead qualification, nurturing, re-engagement, WhatsApp
+                    communication and email campaigns.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-card">
+
+                <h3>Social & Content</h3>
+
+                <p>
+                    Social strategy, content planning, campaign creatives,
+                    reels and student-focused communication.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-card">
+
+                <h3>Campus Marketing</h3>
+
+                <p>
+                    Campus Delegate programs, college outreach, TPO
+                    communication and student communities.
+                </p>
+
+            </div>
+
+
+            <div class="expertise-card">
+
+                <h3>Analytics & Reporting</h3>
+
+                <p>
+                    KPI tracking, source analysis, funnel reporting,
+                    target-vs-actual analysis and campaign performance.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="cta" id="contact">
+
+    <div class="container">
+
+        <h2>Let's build something that grows.</h2>
+
+        <p>
+            Interested in marketing, growth, acquisition or collaboration?
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+
+            <a href="https://github.com/sahibkhuranassk"
+               target="_blank"
+               class="button button-primary">
+                GitHub
+            </a>
+
+            <a href="mailto:YOUR_EMAIL_HERE"
+               class="button button-secondary">
+                Email Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+            © 2026 Sahib Khurana
+        </div>
+
+        <div>
+            Marketing | Growth | Performance | GTM | Automation
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
