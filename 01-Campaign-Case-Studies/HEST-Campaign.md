@@ -157,3 +157,39 @@ Responsibilities included:
 - Social Media Marketing
 - Funnel Optimisation
 - Growth Experimentation
+
+- ## Channel Contribution
+
+The 33,000 registrations were generated through a diversified, multi-channel acquisition strategy.
+
+| Channel | Contribution | Approx. Registrations |
+|---|---:|---:|
+| Meta Ads | 20% | ~6,600 |
+| Influencer Marketing | 20% | ~6,600 |
+| Campus Delegates | 20% | ~6,600 |
+| WhatsApp / Email | 25% | ~8,250 |
+| Organic / Social | 10% | ~3,300 |
+| Other Sources | 5% | ~1,650 |
+| **Total** | **100%** | **33,000** |
+
+### Channel Strategy
+
+**Meta Ads — 20%**  
+Used paid acquisition to reach relevant study-abroad and scholarship audiences.
+
+**Influencer Marketing — 20%**  
+Used student, education and relevant creators to reach highly targeted student communities.
+
+**Campus Delegates — 20%**  
+Used campus-level student networks to drive awareness and registrations within colleges.
+
+**WhatsApp / Email — 25%**  
+Used direct communication and existing databases for campaign distribution, reminders and re-engagement.
+
+**Organic / Social — 10%**  
+Used social media and organic content to generate awareness and registrations.
+
+**Other Sources — 5%**  
+Additional acquisition sources contributed the remaining registrations.
+
+> *Channel registration figures are approximate, calculated from the reported percentage contribution against 33,000 total registrations.*
