@@ -1,94 +1,159 @@
-# HEST - Higher Education Scholarship Test
+# HEST Campaign Case Study
 
-## Overview
+## Campaign Overview
 
-HEST (Higher Education Scholarship Test) is a large-scale scholarship acquisition campaign designed to attract students planning to pursue higher education abroad.
-
-I worked across campaign strategy, acquisition, digital marketing, campus outreach, influencer marketing, WhatsApp marketing, social media, CRM and campaign execution.
+HEST (Higher Education Scholarship Test) is a scholarship-led student acquisition campaign designed to attract students planning to study abroad and convert them into qualified education-finance prospects.
 
 ## Campaign Objective
 
+- Generate awareness for HEST
 - Drive student registrations
-- Build awareness among study-abroad aspirants
-- Generate qualified student leads
-- Increase participation through multiple acquisition channels
-- Build repeatable acquisition systems for future HEST editions
+- Acquire qualified study-abroad leads
+- Build a scalable student acquisition funnel
+- Connect scholarship acquisition with education-loan opportunities
 
-## My Role
+## Campaign Proposition
 
-Marketing & Growth
+Students could participate in an online aptitude test and get an opportunity to win scholarships towards their study-abroad journey.
 
-## Key Responsibilities
+Key proposition:
 
-- Campaign strategy and planning
-- Performance marketing coordination
-- Influencer marketing
-- Campus Delegate program
-- WhatsApp marketing
-- Social media campaigns
-- College and campus outreach
-- CRM and lead management
-- Creative and content coordination
-- Campaign reporting and optimisation
-- Team coordination and execution
+- ₹2 Crore total scholarship fund
+- Up to ₹3 Lakhs scholarship per student
+- 40-minute online test
+- 20 questions
+- No negative marking
+- English & General Aptitude
+- Free registration
+
+## Target Audience
+
+Primary audience:
+
+- Students planning to study abroad
+- Students preparing for upcoming intakes
+- Students researching scholarships
+- Students looking for financial support
+- College students and final-year students
 
 ## Acquisition Channels
 
+### Performance Marketing
 - Meta Ads
-- Influencer Marketing
-- Campus Delegates
-- WhatsApp Marketing
-- Social Media
-- College Outreach
-- Professors & TPO Outreach
-- Existing Lead Database
-- Website & Organic Channels
+- Google/PMax campaigns
+- Conversion-focused creatives
+- Retargeting
 
-## Campaign Structure
-
-The campaign was designed as a multi-channel acquisition system rather than relying on a single marketing channel.
-
-### Digital Acquisition
-
-Performance campaigns were used to reach students interested in scholarships and studying abroad.
-
-### Influencer Acquisition
-
-Student and education-focused influencers were used to reach relevant student audiences and generate registrations.
+### Influencer Marketing
+- Student influencers
+- Nano and micro influencers
+- Study-abroad creators
+- Campus-focused creators
 
 ### Campus Acquisition
+- Campus Delegates
+- College outreach
+- Placement/TPO outreach
+- Campus promotions
 
-Campus Delegates helped distribute campaign communication through college networks, WhatsApp groups and social media.
+### Organic & Direct Channels
+- WMS social media
+- WhatsApp marketing
+- Email marketing
+- Existing lead database
+- Website placements
 
-### WhatsApp Acquisition
+## Campaign Execution
 
-WhatsApp communities and existing student databases were used for campaign communication and registration generation.
+The campaign was structured as a multi-channel acquisition funnel:
 
-### Organic & Institutional Outreach
+Awareness
+→ Interest
+→ HEST Registration
+→ Test Participation
+→ Lead Qualification
+→ Counselling
+→ Education Finance Conversion
 
-Social media, college outreach, professors, TPOs and other institutional channels supported campaign visibility.
+Different channels were used based on their role in the funnel, allowing paid, organic, campus and direct-response activities to work together.
 
-## Execution
+## Lead Qualification
 
-The campaign involved coordinating multiple teams and channels simultaneously, with continuous tracking of registrations, lead quality and channel performance.
+AI-assisted calling was introduced to help pre-qualify HEST registrations.
 
-## Optimisation
+Qualification focused on:
 
-Campaign performance was monitored to identify:
+- Study-abroad intent
+- Intake timeline
+- Country preference
+- Course/education plans
+- Funding requirements
+- Education-loan interest
 
-- High-performing acquisition channels
-- Cost-efficient sources
-- Lead quality
-- Registration trends
-- Campaign response
-- Opportunities for optimisation
+## Creative Strategy
 
-## Outcome
+Creative communication focused on:
 
-The campaign helped establish a repeatable multi-channel acquisition framework for HEST.
+- Scholarship amount
+- Total scholarship fund
+- Free registration
+- Simple online test
+- Study-abroad aspirations
+- Urgency around registration deadlines
 
-Detailed campaign metrics and supporting evidence can be added to this case study as the portfolio is developed.
+The messaging was designed to communicate the value proposition quickly while keeping the registration action simple.
+
+## Growth Experiments
+
+Key experiments included:
+
+- Multiple Meta creative concepts
+- Influencer-led acquisition
+- Campus Delegate acquisition
+- WhatsApp distribution
+- Existing-lead reactivation
+- AI-based lead qualification
+- College/TPO outreach
+- Cross-channel campaign communication
+
+## Results & Learnings
+
+The campaign provided learnings across acquisition, qualification and conversion.
+
+Key learnings:
+
+- Scholarship-led messaging can create a strong acquisition hook for study-abroad audiences.
+- Different acquisition channels require different messaging and conversion approaches.
+- Lead qualification becomes increasingly important as registration volume increases.
+- Campus and influencer channels can complement paid acquisition.
+- Existing lead databases can be used for campaign amplification and reactivation.
+
+## My Role
+
+I was involved in the campaign across strategy, execution and growth.
+
+Responsibilities included:
+
+- Campaign strategy
+- Performance marketing coordination
+- Influencer marketing
+- Campus Delegate strategy
+- WhatsApp marketing
+- Social media coordination
+- Creative direction
+- Lead-generation initiatives
+- AI calling and lead qualification
+- Campaign tracking and optimisation
 
 ## Skills Demonstrated
 
-`Campaign Strategy` `Growth Marketing` `Performance Marketing` `Influencer Marketing` `Campus Acquisition` `WhatsApp Marketing` `CRM` `Lead Generation` `Marketing Operations` `Team Coordination`
+- Growth Marketing
+- Performance Marketing
+- Campaign Strategy
+- Lead Generation
+- Influencer Marketing
+- Campus Acquisition
+- CRM & Automation
+- Social Media Marketing
+- Funnel Optimisation
+- Growth Experimentation
