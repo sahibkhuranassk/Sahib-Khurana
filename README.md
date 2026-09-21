@@ -1,89 +1,89 @@
 # Sahib Khurana
 
-### Marketing | Growth | Performance | GTM | Automation
+## Senior Marketing Manager | Growth & Performance Marketing
 
-I am a marketing and growth professional focused on building and scaling
-acquisition systems across performance marketing, social media,
-influencer marketing, content, CRM, campus acquisition, events,
-and growth experimentation.
+I am a marketing professional focused on building and scaling student acquisition, growth, performance marketing, influencer marketing, CRM, social media, and campaign operations.
 
-This repository is my professional marketing portfolio, documenting
-campaigns, strategies, experiments, frameworks, systems, templates,
-and learnings.
+My work combines **strategy, execution, experimentation, and data** to build measurable marketing systems.
 
 ---
 
-## What I Work On
+## About Me
+
+I work across the full marketing funnel — from acquisition and awareness to lead generation, nurturing, and conversion.
+
+My experience includes managing and coordinating:
 
 - Performance Marketing
-- Social Media Marketing
 - Influencer Marketing
-- Content Strategy
-- Lead Generation & Acquisition
-- CRM & Lifecycle Marketing
-- WhatsApp Marketing
-- Campus & Community Acquisition
-- Events & Experiential Marketing
-- Growth Experiments
-- Marketing Automation
-- GTM Strategy
-- Marketing Analytics
-
----
-
-## Portfolio
-
-| Area | What you'll find |
-|---|---|
-| Performance Marketing | Paid acquisition, creative testing & optimisation |
-| Influencer Marketing | Influencer campaigns, UGC & creator strategy |
-| Social Media | Content strategy, campaigns & growth |
-| Lead Generation | Acquisition channels, funnels & experiments |
-| CRM & Automation | Lead nurturing, segmentation & workflows |
-| Campus Acquisition | Campus marketing & community growth |
-| Campaigns | Campaign strategy, execution & learnings |
-| Growth Experiments | Hypotheses, tests, results & learnings |
-| Analytics | Funnels, reporting & performance measurement |
-| Playbooks | Frameworks, SOPs & reusable templates |
-
----
-
-## Selected Work
-
-- HEST Marketing & Growth
-- SAFE Event Marketing
 - Campus Acquisition
-- Influencer Marketing
-- Lead Nurturing
-- Referral & Growth Campaigns
-- Marketing Automation
-- Performance Marketing
-- Social Media Growth
+- WhatsApp Marketing
+- CRM & Lead Nurturing
+- Social Media & Content
+- Events & Campaigns
+- Lead Generation
+- Marketing Analytics
+- Team & Cross-Functional Coordination
 
 ---
 
-## My Approach
+## Selected Impact
 
-**Research → Strategy → Experiment → Execute → Measure → Learn → Optimise**
+### HEST — Study Abroad Scholarship Campaign
 
-I believe effective marketing combines creative thinking,
-structured experimentation, strong distribution, and measurable
-business outcomes.
+**12-month campaign**
+
+- **25,000** registration target
+- **33,000** registrations generated
+- **132% target achievement**
+- **1,350** sanctions
+- **₹40 lakh** campaign budget
+- Multi-channel acquisition across Meta, influencers, Campus Delegates, WhatsApp/email, organic/social, and other sources
+
+### SAFE — Study Abroad Funding Expo
+
+**4-month campaign**
+
+- **8,000** registration target
+- **11,900** registrations generated
+- **148.75% target achievement**
+- **6,000+** event attendees
+- **12,000+** leads generated
+- **550+** sanctions/conversions
+- **₹50 lakh** campaign budget
+- Campaign execution across **8 cities**
 
 ---
 
-## What This Repository Contains
+## Core Expertise
 
-This repository will continuously evolve as I document:
+| Area | Experience |
+|---|---|
+| Growth Marketing | Acquisition & funnel strategy |
+| Performance Marketing | Meta Ads & Google PMAX |
+| Influencer Marketing | Creator acquisition & tracking |
+| Campus Marketing | Campus Delegate programs |
+| CRM | Lead nurturing & re-engagement |
+| WhatsApp Marketing | Community & lifecycle communication |
+| Social Media | Strategy, content & campaigns |
+| Analytics | KPI, funnel & source reporting |
+| Campaigns | HEST, SAFE & student acquisition |
 
-- Campaign strategies
-- Marketing experiments
-- Case studies
-- Growth frameworks
-- Marketing templates
-- SOPs
-- Analytics frameworks
-- Automation workflows
-- Campaign learnings
-- New marketing ideas
+---
 
+## Marketing Funnel
+
+```text
+Awareness
+    ↓
+Acquisition
+    ↓
+Registration
+    ↓
+Lead Qualification
+    ↓
+Nurturing
+    ↓
+Conversion
+    ↓
+Re-engagement
