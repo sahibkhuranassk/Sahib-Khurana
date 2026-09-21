@@ -145,6 +145,46 @@ Responsibilities included:
 - AI calling and lead qualification
 - Campaign tracking and optimisation
 
+- ## My Role
+
+### Marketing & Growth Lead
+
+I was responsible for planning, coordinating, and executing multiple acquisition initiatives supporting HEST, working across digital, influencer, campus, WhatsApp, social media, CRM, and campaign operations.
+
+### Key Contributions
+
+- Restructured the HEST marketing and acquisition approach.
+- Worked across multiple acquisition channels to support registration growth.
+- Managed and coordinated **Campus Delegate** acquisition.
+- Developed and managed **influencer-led acquisition** initiatives.
+- Managed **WhatsApp marketing and community-led acquisition**.
+- Coordinated **social media and campaign content**.
+- Supported **performance marketing and Meta campaign initiatives**.
+- Worked on lead-generation and lead-nurturing processes.
+- Supported **AI-assisted lead qualification** initiatives.
+- Coordinated with internal teams to improve campaign execution.
+- Worked on campaign tracking, reporting, and optimisation.
+- Helped build repeatable acquisition processes for future HEST editions.
+
+### Acquisition Ownership
+
+My work covered the following acquisition ecosystem:
+
+```text
+Performance Marketing
+        ↓
+Influencer Marketing
+        ↓
+Campus Delegates
+        ↓
+WhatsApp & Email
+        ↓
+Social & Organic
+        ↓
+Lead Qualification
+        ↓
+Conversion
+
 ## Skills Demonstrated
 
 - Growth Marketing
