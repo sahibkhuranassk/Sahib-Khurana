@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sahib Khurana | Marketing & Growth</title>
 
-    <meta name="description" content="Sahib Khurana — Marketing, Growth, Performance, GTM and Automation.">
+    <meta name="description"
+        content="Sahib Khurana — Marketing, Growth, Performance, GTM, Social Media and Automation.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -36,13 +39,15 @@
             margin: auto;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(247, 250, 249, 0.95);
+            background: rgba(247, 250, 249, 0.96);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid #dce8e6;
         }
@@ -76,13 +81,25 @@
             color: #00a896;
         }
 
-        /* HERO */
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             padding: 110px 0 100px;
+
             background:
-                radial-gradient(circle at 85% 20%, rgba(0,168,150,0.12), transparent 30%),
-                linear-gradient(180deg, #f7faf9 0%, #eef7f5 100%);
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(0,168,150,0.12),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    180deg,
+                    #f7faf9 0%,
+                    #eef7f5 100%
+                );
         }
 
         .hero-grid {
@@ -178,7 +195,10 @@
             font-size: 14px;
         }
 
-        /* SECTION */
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
             padding: 90px 0;
@@ -208,7 +228,10 @@
             margin-top: 12px;
         }
 
-        /* IMPACT */
+
+        /* =========================
+           IMPACT
+        ========================= */
 
         .impact {
             background: white;
@@ -225,6 +248,12 @@
             border: 1px solid #dce8e6;
             border-radius: 14px;
             background: #fbfdfc;
+            transition: 0.2s ease;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-3px);
+            border-color: #00a896;
         }
 
         .impact-number {
@@ -240,7 +269,116 @@
             margin-top: 5px;
         }
 
-        /* ABOUT */
+
+        /* =========================
+           MARKETING FOCUS
+        ========================= */
+
+        .focus-section {
+            background: #f7faf9;
+        }
+
+        .focus-layout {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .focus-chart-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pie-chart {
+            width: 330px;
+            height: 330px;
+            border-radius: 50%;
+
+            background: conic-gradient(
+                #00a896 0% 20%,
+                #4fb7ff 20% 38%,
+                #7d6df2 38% 53%,
+                #f1b24a 53% 67%,
+                #ef6f91 67% 77%,
+                #71c957 77% 86%,
+                #a86fe8 86% 93%,
+                #84929f 93% 97%,
+                #f27835 97% 100%
+            );
+
+            position: relative;
+
+            box-shadow:
+                0 20px 60px rgba(16,42,42,0.12);
+        }
+
+        .pie-chart::after {
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+            height: 150px;
+
+            background: #f7faf9;
+
+            border-radius: 50%;
+
+            top: 90px;
+            left: 90px;
+        }
+
+        .focus-legend {
+            display: grid;
+            gap: 4px;
+        }
+
+        .focus-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid #dce8e6;
+        }
+
+        .focus-name {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .focus-dot {
+            width: 10px;
+            height: 10px;
+
+            border-radius: 50%;
+
+            flex-shrink: 0;
+        }
+
+        .focus-percent {
+            font-weight: 800;
+            color: #00a896;
+        }
+
+        .focus-note {
+            margin-top: 20px;
+
+            color: #627674;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about-grid {
             display: grid;
@@ -265,14 +403,27 @@
 
         .skill {
             padding: 18px;
+
             background: white;
+
             border: 1px solid #dce8e6;
             border-radius: 10px;
+
             font-size: 14px;
             font-weight: 700;
+
+            transition: 0.2s ease;
         }
 
-        /* CASE STUDIES */
+        .skill:hover {
+            border-color: #00a896;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           CASE STUDIES
+        ========================= */
 
         .case-studies {
             background: #102a2a;
@@ -291,10 +442,15 @@
 
         .case-card {
             padding: 30px;
+
             border: 1px solid #31504d;
             border-radius: 14px;
+
             background: #153533;
-            transition: transform 0.2s ease, border-color 0.2s ease;
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease;
         }
 
         .case-card:hover {
@@ -304,9 +460,12 @@
 
         .case-card .tag {
             color: #65d5c8;
+
             font-size: 11px;
             font-weight: 800;
+
             letter-spacing: 1.2px;
+
             text-transform: uppercase;
         }
 
@@ -317,17 +476,55 @@
 
         .case-card p {
             color: #b8cecb;
+
             font-size: 14px;
+
             margin-bottom: 20px;
+        }
+
+        .case-result {
+            margin: 20px 0;
+
+            padding: 15px;
+
+            border-left: 3px solid #00a896;
+
+            background: rgba(0,168,150,0.07);
+        }
+
+        .case-result strong {
+            display: block;
+
+            color: #ffffff;
+
+            font-size: 15px;
+        }
+
+        .case-result span {
+            display: block;
+
+            color: #91b4af;
+
+            font-size: 12px;
+
+            margin-top: 4px;
         }
 
         .case-link {
             color: #65d5c8;
+
             font-size: 13px;
             font-weight: 700;
         }
 
-        /* EXPERTISE */
+        .case-link:hover {
+            color: white;
+        }
+
+
+        /* =========================
+           EXPERTISE
+        ========================= */
 
         .expertise-grid {
             display: grid;
@@ -337,8 +534,10 @@
 
         .expertise-card {
             background: white;
+
             border: 1px solid #dce8e6;
             border-radius: 14px;
+
             padding: 28px;
         }
 
@@ -352,7 +551,10 @@
             font-size: 14px;
         }
 
-        /* CTA */
+
+        /* =========================
+           CTA
+        ========================= */
 
         .cta {
             text-align: center;
@@ -370,23 +572,35 @@
             margin-bottom: 28px;
         }
 
-        /* FOOTER */
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             padding: 35px 0;
+
             background: #0b2020;
+
             color: #9eb5b2;
+
             font-size: 13px;
         }
 
         .footer-inner {
             display: flex;
+
             justify-content: space-between;
+
             gap: 20px;
+
             align-items: center;
         }
 
-        /* MOBILE */
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
 
@@ -399,7 +613,8 @@
             }
 
             .hero-grid,
-            .about-grid {
+            .about-grid,
+            .focus-layout {
                 grid-template-columns: 1fr;
             }
 
@@ -410,6 +625,10 @@
             .case-grid,
             .expertise-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .focus-layout {
+                gap: 45px;
             }
 
             h1 {
@@ -426,7 +645,9 @@
             }
         }
 
+
         @media (max-width: 500px) {
+
             .impact-grid {
                 grid-template-columns: 1fr;
             }
@@ -438,15 +659,43 @@
             section {
                 padding: 65px 0;
             }
+
+            .pie-chart {
+                width: 270px;
+                height: 270px;
+            }
+
+            .pie-chart::after {
+                width: 120px;
+                height: 120px;
+
+                top: 75px;
+                left: 75px;
+            }
+
+            .section-heading h2 {
+                font-size: 32px;
+            }
+
+            .cta h2 {
+                font-size: 34px;
+            }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
+
     <div class="container nav-inner">
 
         <a href="#" class="logo">
@@ -454,22 +703,47 @@
         </a>
 
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#impact">Impact</a></li>
-            <li><a href="#case-studies">Case Studies</a></li>
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#impact">Impact</a>
+            </li>
+
+            <li>
+                <a href="#focus">Focus</a>
+            </li>
+
+            <li>
+                <a href="#case-studies">Case Studies</a>
+            </li>
+
+            <li>
+                <a href="#expertise">Expertise</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
         </ul>
 
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
     <div class="container hero-grid">
+
 
         <div>
 
@@ -477,38 +751,57 @@
                 Marketing • Growth • Performance • GTM
             </div>
 
+
             <h1>
                 Sahib<br>
                 <span>Khurana.</span>
             </h1>
 
+
             <p class="hero-description">
+
                 Marketing professional focused on building and scaling
-                acquisition systems across performance marketing, influencer
-                marketing, campus acquisition, CRM, social media, events and
-                growth experimentation.
+                acquisition systems across performance marketing,
+                influencer marketing, campus acquisition, CRM,
+                social media, content, events and growth experimentation.
+
             </p>
 
+
             <div class="buttons">
-                <a href="#case-studies" class="button button-primary">
+
+                <a
+                    href="#case-studies"
+                    class="button button-primary"
+                >
                     Explore My Work
                 </a>
 
-                <a href="#contact" class="button button-secondary">
+
+                <a
+                    href="#contact"
+                    class="button button-secondary"
+                >
                     Get In Touch
                 </a>
+
             </div>
 
         </div>
 
 
+
         <div class="hero-card">
 
-            <small>What I Do</small>
+            <small>
+                What I Do
+            </small>
+
 
             <h2>
                 Turning marketing activity into measurable growth.
             </h2>
+
 
             <p>
                 Strategy → Acquisition → Leads → Nurturing → Conversion
@@ -516,47 +809,369 @@
 
         </div>
 
+
     </div>
 
 </header>
 
 
-<!-- IMPACT -->
 
-<section class="impact" id="impact">
+<!-- =========================
+     IMPACT
+========================= -->
+
+<section
+    class="impact"
+    id="impact"
+>
 
     <div class="container">
 
+
         <div class="section-heading">
-            <span>Selected Impact</span>
-            <h2>Numbers that tell the story.</h2>
+
+            <span>
+                Selected Impact
+            </span>
+
+            <h2>
+                Numbers that tell the story.
+            </h2>
+
             <p>
-                Selected campaign outcomes from multi-channel marketing
-                initiatives.
+                Selected campaign outcomes from multi-channel
+                marketing initiatives.
             </p>
+
         </div>
+
 
 
         <div class="impact-grid">
 
-            <div class="impact-card">
-                <div class="impact-number">33K</div>
-                <div class="impact-label">HEST registrations generated</div>
-            </div>
+
+            <!-- HEST REGISTRATIONS -->
 
             <div class="impact-card">
-                <div class="impact-number">1,350</div>
-                <div class="impact-label">HEST sanctions</div>
+
+                <div class="impact-number">
+                    33K
+                </div>
+
+                <div class="impact-label">
+                    HEST registrations generated
+                </div>
+
             </div>
 
-            <div class="impact-card">
-                <div class="impact-number">11.9K</div>
-                <div class="impact-label">SAFE registrations</div>
-            </div>
+
+
+            <!-- HEST SANCTIONS -->
 
             <div class="impact-card">
-                <div class="impact-number">12K+</div>
-                <div class="impact-label">SAFE leads generated</div>
+
+                <div class="impact-number">
+                    1,350
+                </div>
+
+                <div class="impact-label">
+                    HEST sanctions
+                </div>
+
+            </div>
+
+
+
+            <!-- SAFE LEADS -->
+
+            <div class="impact-card">
+
+                <div class="impact-number">
+                    12K+
+                </div>
+
+                <div class="impact-label">
+                    SAFE leads generated
+                </div>
+
+            </div>
+
+
+
+            <!-- SAFE SANCTIONS -->
+
+            <div class="impact-card">
+
+                <div class="impact-number">
+                    550+
+                </div>
+
+                <div class="impact-label">
+                    SAFE sanctions
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     AREAS OF FOCUS
+========================= -->
+
+<section
+    class="focus-section"
+    id="focus"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                Marketing & Growth
+            </span>
+
+            <h2>
+                Areas of Focus
+            </h2>
+
+            <p>
+                A snapshot of the marketing functions I have worked
+                across — from acquisition and content to campaigns,
+                community, performance and growth operations.
+            </p>
+
+        </div>
+
+
+
+        <div class="focus-layout">
+
+
+            <!-- PIE CHART -->
+
+            <div class="focus-chart-wrapper">
+
+                <div
+                    class="pie-chart"
+                    title="Marketing Areas of Focus"
+                ></div>
+
+            </div>
+
+
+
+            <!-- LEGEND -->
+
+            <div class="focus-legend">
+
+
+                <div class="focus-item">
+
+                    <div class="focus-name">
+
+                        <span
+                            class="focus-dot"
+                            style="background:#00a896;"
+                        ></span>
+
+                        Performance Marketing
+
+                    </div>
+
+                    <div class="focus-percent">
+                        20%
+                    </div>
+
+                </div>
+
+
+
+                <div class="focus-item">
+
+                    <div class="focus-name">
+
+                        <span
+                            class="focus-dot"
+                            style="background:#4fb7ff;"
+                        ></span>
+
+                        Social Media & Content
+
+                    </div>
+
+                    <div class="focus-percent">
+                        18%
+                    </div>
+
+                </div>
+
+
+
+                <div class="focus-item">
+
+                    <div class="focus-name">
+
+                        <span
+                            class="focus-dot"
+                            style="background:#7d6df2;"
+                        ></span>
+
+                        Campaign Strategy & Execution
+
+                    </div>
+
+                    <div class="focus-percent">
+                        15%
+                    </div>
+
+                </div>
+
+
+
+                <div class="focus-item">
+
+                    <div class="focus-name">
+
+                        <span
+                            class="focus-dot"
+                            style="background:#f1b24a;"
+                        ></span>
+
+                        WhatsApp & Community
+
+                    </div>
+
+                    <div class="focus-percent">
+                        14%
+                    </div>
+
+                </div>
+
+
+
+                <div class="focus-item">
+
+                    <div class="focus-name">
+
+                        <span
+                            class="focus-dot"
+                            style="background:#ef6f91;"
+                        ></span>
+
+                        Influencer Marketing
+
+                    </div>
+
+                    <div class="focus-percent">
+                        10%
+                    </div>
+
+                </div>
+
+
+
+                <div class="focus-item">
+
+                    <div class="focus-name">
+
+                        <span
+                            class="focus-dot"
+                            style="background:#71c957;"
+                        ></span>
+
+                        Campus Acquisition
+
+                    </div>
+
+                    <div class="focus-percent">
+                        9%
+                    </div>
+
+                </div>
+
+
+
+                <div class="focus-item">
+
+                    <div class="focus-name">
+
+                        <span
+                            class="focus-dot"
+                            style="background:#a86fe8;"
+                        ></span>
+
+                        CRM & Automation
+
+                    </div>
+
+                    <div class="focus-percent">
+                        7%
+                    </div>
+
+                </div>
+
+
+
+                <div class="focus-item">
+
+                    <div class="focus-name">
+
+                        <span
+                            class="focus-dot"
+                            style="background:#84929f;"
+                        ></span>
+
+                        Analytics & Reporting
+
+                    </div>
+
+                    <div class="focus-percent">
+                        4%
+                    </div>
+
+                </div>
+
+
+
+                <div class="focus-item">
+
+                    <div class="focus-name">
+
+                        <span
+                            class="focus-dot"
+                            style="background:#f27835;"
+                        ></span>
+
+                        GTM & Projects
+
+                    </div>
+
+                    <div class="focus-percent">
+                        3%
+                    </div>
+
+                </div>
+
+
+
+                <p class="focus-note">
+
+                    *Portfolio representation of areas of focus and
+                    responsibility, not a direct measurement of
+                    working-hour allocation.
+
+                </p>
+
+
             </div>
 
         </div>
@@ -566,53 +1181,111 @@
 </section>
 
 
-<!-- ABOUT -->
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
     <div class="container">
 
+
         <div class="section-heading">
-            <span>About</span>
-            <h2>Marketing across the funnel.</h2>
+
+            <span>
+                About
+            </span>
+
+            <h2>
+                Marketing across the funnel.
+            </h2>
+
         </div>
+
 
 
         <div class="about-grid">
 
+
             <div class="about-text">
 
-                <p>
-                    I work across the full marketing funnel — from awareness
-                    and acquisition to lead generation, nurturing and
-                    conversion.
-                </p>
 
                 <p>
-                    My experience combines strategic planning with hands-on
-                    execution across paid media, influencers, campus networks,
-                    WhatsApp, email, social media, CRM and events.
+
+                    I work across the full marketing funnel —
+                    from awareness and acquisition to lead generation,
+                    nurturing and conversion.
+
                 </p>
 
+
                 <p>
-                    I enjoy building repeatable systems that make marketing
-                    more measurable, scalable and connected to business
-                    outcomes.
+
+                    My experience combines strategic planning with
+                    hands-on execution across paid media, influencers,
+                    campus networks, WhatsApp, email, social media,
+                    content, CRM and events.
+
                 </p>
+
+
+                <p>
+
+                    I enjoy building repeatable systems that make
+                    marketing more measurable, scalable and connected
+                    to business outcomes.
+
+                </p>
+
 
             </div>
 
 
+
             <div class="skills">
 
-                <div class="skill">Growth Marketing</div>
-                <div class="skill">Performance Marketing</div>
-                <div class="skill">Influencer Marketing</div>
-                <div class="skill">Campus Acquisition</div>
-                <div class="skill">CRM & Automation</div>
-                <div class="skill">WhatsApp Marketing</div>
-                <div class="skill">Social Media</div>
-                <div class="skill">Marketing Analytics</div>
+
+                <div class="skill">
+                    Growth Marketing
+                </div>
+
+                <div class="skill">
+                    Performance Marketing
+                </div>
+
+                <div class="skill">
+                    Campaign Strategy
+                </div>
+
+                <div class="skill">
+                    Influencer Marketing
+                </div>
+
+                <div class="skill">
+                    Social Media & Content
+                </div>
+
+                <div class="skill">
+                    Campus Acquisition
+                </div>
+
+                <div class="skill">
+                    CRM & Automation
+                </div>
+
+                <div class="skill">
+                    WhatsApp Marketing
+                </div>
+
+                <div class="skill">
+                    Marketing Analytics
+                </div>
+
+                <div class="skill">
+                    GTM & Projects
+                </div>
+
 
             </div>
 
@@ -623,105 +1296,318 @@
 </section>
 
 
-<!-- CASE STUDIES -->
 
-<section class="case-studies" id="case-studies">
+<!-- =========================
+     CASE STUDIES
+========================= -->
+
+<section
+    class="case-studies"
+    id="case-studies"
+>
 
     <div class="container">
 
+
         <div class="section-heading">
 
-            <span>Case Studies</span>
+            <span>
+                Case Studies
+            </span>
 
-            <h2>Selected marketing work.</h2>
+            <h2>
+                Selected marketing work.
+            </h2>
 
             <p>
+
                 Campaigns, acquisition systems and growth initiatives
-                documented with objectives, execution and measurable outcomes.
+                documented with objectives, execution and measurable
+                outcomes.
+
             </p>
 
         </div>
 
 
+
         <div class="case-grid">
 
 
-            <a href="01-Campaign-Case-Studies/HEST-Campaign.md"
-               class="case-card">
+            <!-- HEST -->
 
-                <div class="tag">Campaign</div>
+            <div class="case-card">
 
-                <h3>HEST Campaign</h3>
-
-                <p>
-                    Multi-channel student acquisition campaign combining
-                    scholarship-led marketing with education-finance
-                    opportunities.
-                </p>
-
-                <div class="case-link">
-                    View Case Study →
+                <div class="tag">
+                    Campaign
                 </div>
 
-            </a>
-
-
-            <a href="01-Campaign-Case-Studies/SAFE-Campaign.md"
-               class="case-card">
-
-                <div class="tag">Events & Acquisition</div>
-
-                <h3>SAFE Campaign</h3>
+                <h3>
+                    HEST Campaign
+                </h3>
 
                 <p>
+
+                    Multi-channel student acquisition campaign
+                    combining scholarship-led marketing with
+                    education-finance opportunities.
+
+                </p>
+
+
+                <div class="case-result">
+
+                    <strong>
+                        33K registrations • 1,350 sanctions
+                    </strong>
+
+                    <span>
+                        Multi-channel acquisition
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="01-Campaign-Case-Studies/HEST-Campaign.md"
+                    target="_blank"
+                    class="case-link"
+                >
+                    View Case Study →
+                </a>
+
+            </div>
+
+
+
+            <!-- SAFE -->
+
+            <div class="case-card">
+
+                <div class="tag">
+                    Events & Acquisition
+                </div>
+
+                <h3>
+                    SAFE Campaign
+                </h3>
+
+                <p>
+
                     Multi-city study-abroad funding campaign covering
-                    registration, event attendance, lead generation and
-                    conversion.
+                    registrations, event attendance, lead generation
+                    and conversion.
+
                 </p>
 
-                <div class="case-link">
-                    View Case Study →
+
+                <div class="case-result">
+
+                    <strong>
+                        12K+ leads • 550+ sanctions
+                    </strong>
+
+                    <span>
+                        Multi-city event acquisition
+                    </span>
+
                 </div>
 
-            </a>
+
+                <a
+                    href="01-Campaign-Case-Studies/SAFE-Campaign.md"
+                    target="_blank"
+                    class="case-link"
+                >
+                    View Case Study →
+                </a>
+
+            </div>
 
 
-            <a href="01-Campaign-Case-Studies/Influencer-Marketing.md"
-               class="case-card">
 
-                <div class="tag">Influencer</div>
+            <!-- INFLUENCER -->
 
-                <h3>Influencer Marketing</h3>
+            <div class="case-card">
+
+                <div class="tag">
+                    Influencer
+                </div>
+
+                <h3>
+                    Influencer Marketing
+                </h3>
 
                 <p>
-                    Creator-led acquisition strategy designed to expand
-                    student reach and generate measurable leads.
+
+                    Creator-led acquisition strategy designed to
+                    expand student reach, activate creators and
+                    generate measurable leads.
+
                 </p>
 
-                <div class="case-link">
-                    View Case Study →
+
+                <div class="case-result">
+
+                    <strong>
+                        Creator → Content → Leads
+                    </strong>
+
+                    <span>
+                        Structured influencer acquisition funnel
+                    </span>
+
                 </div>
 
-            </a>
+
+                <a
+                    href="01-Campaign-Case-Studies/Influencer-Marketing.md"
+                    target="_blank"
+                    class="case-link"
+                >
+                    View Case Study →
+                </a>
+
+            </div>
 
 
-            <a href="01-Campaign-Case-Studies/WhatsApp-Marketing.md"
-               class="case-card">
 
-                <div class="tag">CRM & Community</div>
+            <!-- WHATSAPP -->
 
-                <h3>WhatsApp Marketing</h3>
+            <div class="case-card">
+
+                <div class="tag">
+                    CRM & Community
+                </div>
+
+                <h3>
+                    WhatsApp Marketing
+                </h3>
 
                 <p>
-                    Community-based communication and student acquisition
-                    using WhatsApp groups and structured outreach.
+
+                    Community-led student acquisition and re-engagement
+                    through structured WhatsApp group activities,
+                    outreach and follow-ups.
+
                 </p>
 
-                <div class="case-link">
-                    View Case Study →
+
+                <div class="case-result">
+
+                    <strong>
+                        80 → 140 sanctions
+                    </strong>
+
+                    <span>
+                        Sep 2024–Aug 2025 → Sep 2025–Aug 2026
+                    </span>
+
                 </div>
 
-            </a>
+
+                <a
+                    href="01-Campaign-Case-Studies/Whatsapp-Marketing.md"
+                    target="_blank"
+                    class="case-link"
+                >
+                    View Case Study →
+                </a>
+
+            </div>
+
+
+
+            <!-- SOCIAL MEDIA -->
+
+            <div class="case-card">
+
+                <div class="tag">
+                    Social Media & Content
+                </div>
+
+                <h3>
+                    Social Media & Content
+                </h3>
+
+                <p>
+
+                    End-to-end content and social media execution
+                    covering strategy, content calendars, scripting,
+                    hooks, copywriting, Reels, short-form content,
+                    creative concepts and campaign content.
+
+                </p>
+
+
+                <div class="case-result">
+
+                    <strong>
+                        Strategy → Script → Content → Publish
+                    </strong>
+
+                    <span>
+                        WMS + brand content execution
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="05-Social-Media-Content/"
+                    target="_blank"
+                    class="case-link"
+                >
+                    View Work →
+                </a>
+
+            </div>
+
+
+
+            <!-- ADWISKO -->
+
+            <div class="case-card">
+
+                <div class="tag">
+                    Brand & Content
+                </div>
+
+                <h3>
+                    Adwisko
+                </h3>
+
+                <p>
+
+                    Hands-on content development for Adwisko including
+                    content ideas, scripting, Reels, creative concepts,
+                    social media copy and campaign-led communication.
+
+                </p>
+
+
+                <div class="case-result">
+
+                    <strong>
+                        Ideas → Scripts → Reels → Social
+                    </strong>
+
+                    <span>
+                        Content and social execution
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="05-Social-Media-Content/"
+                    target="_blank"
+                    class="case-link"
+                >
+                    View Work →
+                </a>
+
+            </div>
 
 
         </div>
@@ -731,19 +1617,35 @@
 </section>
 
 
-<!-- EXPERTISE -->
+
+<!-- =========================
+     EXPERTISE
+========================= -->
 
 <section id="expertise">
 
     <div class="container">
 
+
         <div class="section-heading">
 
-            <span>Expertise</span>
+            <span>
+                Expertise
+            </span>
 
-            <h2>Where I create value.</h2>
+            <h2>
+                What I bring to a marketing team.
+            </h2>
+
+            <p>
+
+                A combination of strategy, execution, experimentation,
+                systems thinking and hands-on marketing operations.
+
+            </p>
 
         </div>
+
 
 
         <div class="expertise-grid">
@@ -751,71 +1653,100 @@
 
             <div class="expertise-card">
 
-                <h3>Performance Marketing</h3>
+                <h3>
+                    Acquisition
+                </h3>
 
                 <p>
-                    Paid acquisition, Meta Ads, Google Ads, PMAX,
-                    creative testing, optimisation and funnel analysis.
+
+                    Paid media, campaign strategy, influencers,
+                    campus acquisition and community-led growth.
+
                 </p>
 
             </div>
 
 
+
             <div class="expertise-card">
 
-                <h3>Growth & Acquisition</h3>
+                <h3>
+                    Content
+                </h3>
 
                 <p>
-                    Student acquisition, influencer programs, campus
-                    marketing, communities and lead-generation systems.
+
+                    Content strategy, scripting, Reels, social media,
+                    copywriting, creative concepts and calendars.
+
                 </p>
 
             </div>
 
 
+
             <div class="expertise-card">
 
-                <h3>CRM & Lifecycle</h3>
+                <h3>
+                    CRM & Automation
+                </h3>
 
                 <p>
-                    Lead qualification, nurturing, re-engagement, WhatsApp
-                    communication and email campaigns.
+
+                    Lead nurturing, WhatsApp, email communication,
+                    CRM processes and marketing automation.
+
                 </p>
 
             </div>
 
 
+
             <div class="expertise-card">
 
-                <h3>Social & Content</h3>
+                <h3>
+                    Growth Systems
+                </h3>
 
                 <p>
-                    Social strategy, content planning, campaign creatives,
-                    reels and student-focused communication.
+
+                    Building repeatable acquisition processes,
+                    workflows, team systems and campaign operations.
+
                 </p>
 
             </div>
 
 
+
             <div class="expertise-card">
 
-                <h3>Campus Marketing</h3>
+                <h3>
+                    Analytics
+                </h3>
 
                 <p>
-                    Campus Delegate programs, college outreach, TPO
-                    communication and student communities.
+
+                    Campaign reporting, funnel analysis, performance
+                    tracking and conversion-focused optimisation.
+
                 </p>
 
             </div>
 
 
+
             <div class="expertise-card">
 
-                <h3>Analytics & Reporting</h3>
+                <h3>
+                    GTM & Projects
+                </h3>
 
                 <p>
-                    KPI tracking, source analysis, funnel reporting,
-                    target-vs-actual analysis and campaign performance.
+
+                    Launch planning, cross-functional coordination,
+                    events, campaigns and growth initiatives.
+
                 </p>
 
             </div>
@@ -828,29 +1759,40 @@
 </section>
 
 
-<!-- CONTACT -->
 
-<section class="cta" id="contact">
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+    class="cta"
+    id="contact"
+>
 
     <div class="container">
 
-        <h2>Let's build something that grows.</h2>
+
+        <h2>
+            Let's build something that grows.
+        </h2>
+
 
         <p>
-            Interested in marketing, growth, acquisition or collaboration?
+
+            Open to conversations around marketing,
+            growth, performance, GTM and brand opportunities.
+
         </p>
 
-        <div class="buttons" style="justify-content:center;">
 
-            <a href="https://github.com/sahibkhuranassk"
-               target="_blank"
-               class="button button-primary">
-                GitHub
-            </a>
+        <div class="buttons"
+             style="justify-content:center;">
 
-            <a href="mailto:YOUR_EMAIL_HERE"
-               class="button button-secondary">
-                Email Me
+            <a
+                href="mailto:sahibkhurana@email.com"
+                class="button button-primary"
+            >
+                Contact Me
             </a>
 
         </div>
@@ -860,7 +1802,10 @@
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -871,12 +1816,14 @@
         </div>
 
         <div>
-            Marketing | Growth | Performance | GTM | Automation
+            Marketing • Growth • Performance • GTM
         </div>
 
     </div>
 
 </footer>
 
+
 </body>
+
 </html>
