@@ -1,1706 +1,661 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#14243a">
-  <meta name="description" content="Sahib Khurana's marketing portfolio — performance marketing, social media growth, creator partnerships and marketing automation.">
-  <meta property="og:title" content="Sahib Khurana | Marketing & Growth">
-  <meta property="og:description" content="Performance marketing, content strategy, creator partnerships and conversion-focused systems.">
-  <meta property="og:type" content="website">
-  <title>Sahib Khurana | Marketing & Growth Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --white: #ffffff;
-      --navy: #14243a;
-      --blue: #477bff;
-      --blue-dark: #315fdb;
-      --text: #243247;
-      --muted: #64748b;
-      --line: #e3e8ef;
-      --soft: #e8edf4;
-      --radius: 22px;
-      --shadow: 0 16px 50px rgba(20,36,58,.08);
-      --max: 1120px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, system-ui, -apple-system, sans-serif;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    body.modal-open { overflow: hidden; }
-
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-
-    .container {
-      width: min(var(--max), calc(100% - 40px));
-      margin-inline: auto;
-    }
-
-    .section { padding: 88px 0; }
-    .section-alt { background: var(--white); }
-
-    .kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--blue-dark);
-      font-size: .76rem;
-      font-weight: 800;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .kicker::before {
-      content: "";
-      width: 22px;
-      height: 2px;
-      background: currentColor;
-    }
-
-    .section-heading {
-      max-width: 720px;
-      margin: 12px 0;
-      color: var(--navy);
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.13;
-      letter-spacing: -.055em;
-    }
-
-    .section-intro {
-      max-width: 680px;
-      margin: 0 0 32px;
-      color: var(--muted);
-    }
-
-    /* Navigation */
-
-    .nav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(247,248,250,.91);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav-inner {
-      min-height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      color: var(--navy);
-      font-size: 1.2rem;
-      font-weight: 800;
-      letter-spacing: -.045em;
-    }
-
-    .brand span { color: var(--blue); }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      color: #536176;
-      font-size: .86rem;
-      font-weight: 600;
-    }
-
-    .nav-links a:hover { color: var(--blue); }
-
-    .nav-cta {
-      padding: 10px 15px;
-      border-radius: 999px;
-      background: var(--navy);
-      color: white !important;
-    }
-
-    .menu-toggle {
-      display: none;
-      padding: 9px 12px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: white;
-      color: var(--navy);
-      cursor: pointer;
-    }
-
-    /* Hero */
-
-    .hero {
-      padding: 74px 0 56px;
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      align-items: center;
-      gap: 58px;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      color: var(--blue-dark);
-      font-size: .77rem;
-      font-weight: 800;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--blue);
-      box-shadow: 0 0 0 5px rgba(71,123,255,.12);
-    }
-
-    h1 {
-      margin: 18px 0;
-      color: var(--navy);
-      font-size: clamp(2.8rem, 6vw, 5.1rem);
-      line-height: .99;
-      letter-spacing: -.075em;
-      font-weight: 800;
-    }
-
-    h1 .accent { color: var(--blue); }
-
-    .hero-lede {
-      max-width: 570px;
-      margin: 0 0 14px;
-      color: #536176;
-      font-size: 1.1rem;
-    }
-
-    .hero-bio {
-      max-width: 550px;
-      margin: 0 0 26px;
-      color: #748095;
-      font-size: .97rem;
-    }
-
-    .button-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 13px 18px;
-      border: 1px solid transparent;
-      border-radius: 12px;
-      font-size: .88rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform .2s, background .2s, border-color .2s;
-    }
-
-    .btn:hover { transform: translateY(-2px); }
-
-    .btn-primary {
-      background: var(--navy);
-      color: white;
-    }
-
-    .btn-primary:hover { background: #203954; }
-
-    .btn-secondary {
-      background: white;
-      border-color: #d7dee8;
-      color: var(--navy);
-    }
-
-    .hero-photo-wrap {
-      position: relative;
-      width: 100%;
-      max-width: 460px;
-      margin-left: auto;
-    }
-
-    .hero-photo {
-      position: relative;
-      z-index: 1;
-      display: block;
-      width: 100%;
-      height: 510px;
-      object-fit: cover;
-      object-position: center 34%;
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .photo-frame {
-      position: absolute;
-      inset: 22px -16px -16px 22px;
-      border: 1px solid #cbd8ef;
-      border-radius: 28px;
-    }
-
-    .photo-note {
-      position: absolute;
-      z-index: 2;
-      bottom: 20px;
-      left: -22px;
-      padding: 12px 16px;
-      border: 1px solid var(--line);
-      border-radius: 15px;
-      background: white;
-      color: var(--navy);
-      box-shadow: var(--shadow);
-      font-size: .82rem;
-      font-weight: 700;
-    }
-
-    .photo-note small {
-      display: block;
-      color: var(--muted);
-      font-size: .72rem;
-      font-weight: 500;
-    }
-
-    /* Metrics */
-
-    .metrics { padding: 8px 0 44px; }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .metric-card {
-      min-width: 0;
-      padding: 23px 21px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: white;
-      transition: transform .25s, box-shadow .25s;
-    }
-
-    .metric-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow);
-    }
-
-    .metric-value {
-      color: var(--navy);
-      font-size: clamp(1.55rem, 3vw, 2.2rem);
-      font-weight: 800;
-      letter-spacing: -.06em;
-      line-height: 1.15;
-    }
-
-    .metric-value.blue { color: var(--blue); }
-
-    .metric-label {
-      margin-top: 8px;
-      color: var(--text);
-      font-size: .86rem;
-      font-weight: 700;
-    }
-
-    .metric-note {
-      margin-top: 3px;
-      color: var(--muted);
-      font-size: .75rem;
-    }
-
-    /* Shared cards */
-
-    .work-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
-
-    .work-card, .brand-card, .gallery-card {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: white;
-      transition: transform .25s, box-shadow .25s, border-color .25s;
-    }
-
-    .work-card {
-      padding: 27px;
-    }
-
-    .work-card:hover, .brand-card:hover, .gallery-card:hover {
-      transform: translateY(-4px);
-      border-color: #cbd8ef;
-      box-shadow: var(--shadow);
-    }
-
-    .work-icon, .gallery-symbol {
-      display: grid;
-      place-items: center;
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
-      background: #edf2ff;
-      color: var(--blue-dark);
-      font-size: 1.25rem;
-    }
-
-    .work-card h3 {
-      margin: 18px 0 8px;
-      color: var(--navy);
-      font-size: 1.2rem;
-      letter-spacing: -.03em;
-    }
-
-    .work-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: .91rem;
-    }
-
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 19px;
-    }
-
-    .tag {
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #f1f4f8;
-      color: #526176;
-      font-size: .72rem;
-      font-weight: 600;
-    }
-
-    .mini-metric {
-      display: inline-flex;
-      align-items: baseline;
-      gap: 8px;
-      margin-top: 17px;
-    }
-
-    .mini-metric strong {
-      color: var(--blue-dark);
-      font-size: 1.4rem;
-      letter-spacing: -.05em;
-    }
-
-    .mini-metric span {
-      color: var(--muted);
-      font-size: .8rem;
-    }
-
-    /* Social media */
-
-    .social-feature {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      margin-top: 24px;
-    }
-
-    .brand-card {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      padding: 24px;
-    }
-
-    .brand-card-head {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand-mark {
-      display: grid;
-      place-items: center;
-      width: 52px;
-      height: 52px;
-      border-radius: 15px;
-      background: #edf2ff;
-      color: var(--navy);
-      font-size: .9rem;
-      font-weight: 800;
-    }
-
-    .brand-card h3 {
-      margin: 0;
-      color: var(--navy);
-      font-size: 1.05rem;
-    }
-
-    .brand-card p {
-      margin: 3px 0 0;
-      color: var(--muted);
-      font-size: .82rem;
-    }
-
-    .brand-card-bottom {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .text-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      color: var(--blue-dark);
-      font-size: .84rem;
-      font-weight: 700;
-    }
-
-    .text-link:hover { text-decoration: underline; }
-
-    .consulting-line {
-      margin-top: 20px;
-      padding: 18px 20px;
-      border: 1px dashed #cdd7e5;
-      border-radius: 16px;
-      color: var(--muted);
-      font-size: .9rem;
-    }
-
-    .consulting-line strong { color: var(--navy); }
-
-    /* Galleries */
-
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .gallery-card {
-      display: flex;
-      flex-direction: column;
-      min-height: 220px;
-      padding: 23px;
-    }
-
-    .gallery-card h3 {
-      margin: 15px 0 7px;
-      color: var(--navy);
-      font-size: 1.05rem;
-    }
-
-    .gallery-card p {
-      flex: 1;
-      margin: 0 0 20px;
-      color: var(--muted);
-      font-size: .84rem;
-    }
-
-    .gallery-card .btn {
-      width: 100%;
-      padding: 11px 12px;
-      font-size: .81rem;
-    }
-
-    /* CRM */
-
-    .crm-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .crm-points {
-      display: grid;
-      gap: 15px;
-      margin-top: 25px;
-    }
-
-    .crm-point {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-    }
-
-    .check {
-      display: grid;
-      place-items: center;
-      width: 24px;
-      height: 24px;
-      flex-shrink: 0;
-      border-radius: 50%;
-      background: #e8f0ff;
-      color: var(--blue-dark);
-      font-size: .8rem;
-      font-weight: 800;
-    }
-
-    .crm-point strong {
-      display: block;
-      color: var(--navy);
-      font-size: .91rem;
-    }
-
-    .crm-point span {
-      display: block;
-      color: var(--muted);
-      font-size: .83rem;
-    }
-
-    .process-card {
-      padding: 28px;
-      border-radius: var(--radius);
-      background: var(--navy);
-      color: white;
-      box-shadow: var(--shadow);
-    }
-
-    .process-card h3 {
-      margin: 0 0 20px;
-      font-size: 1.15rem;
-    }
-
-    .process-step {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 15px 0;
-      border-top: 1px solid rgba(255,255,255,.14);
-    }
-
-    .step-num {
-      display: grid;
-      place-items: center;
-      width: 34px;
-      height: 34px;
-      flex-shrink: 0;
-      border-radius: 11px;
-      background: rgba(71,123,255,.22);
-      color: #a9c0ff;
-      font-size: .8rem;
-      font-weight: 800;
-    }
-
-    .process-step strong {
-      display: block;
-      font-size: .89rem;
-    }
-
-    .process-step small {
-      color: #bac6d8;
-      font-size: .77rem;
-    }
-
-    /* About */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: .82fr 1.18fr;
-      align-items: center;
-      gap: 58px;
-    }
-
-    .about-photo {
-      width: 100%;
-      height: 440px;
-      object-fit: cover;
-      object-position: center 28%;
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-    }
-
-    .about-copy p {
-      margin: 0 0 16px;
-      color: var(--muted);
-    }
-
-    .about-quote {
-      margin: 24px 0;
-      padding: 5px 0 5px 18px;
-      border-left: 3px solid var(--blue);
-      color: var(--navy);
-      font-size: 1.08rem;
-      font-weight: 600;
-    }
-
-    .principles {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .principle {
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: 15px;
-      background: white;
-    }
-
-    .principle strong {
-      display: block;
-      color: var(--navy);
-      font-size: .87rem;
-    }
-
-    .principle span {
-      display: block;
-      margin-top: 4px;
-      color: var(--muted);
-      font-size: .77rem;
-    }
-
-    /* Animated expertise chart */
-
-    .expertise-layout {
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
-      align-items: center;
-      gap: 45px;
-    }
-
-    .chart-panel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-width: 0;
-    }
-
-    .expertise-chart {
-      width: 100%;
-      max-width: 350px;
-      overflow: visible;
-    }
-
-    .chart-segment {
-      transform: rotate(-90deg);
-      transform-origin: 100px 100px;
-      stroke-dasharray: 0 440;
-      transition: stroke-dasharray 1.3s cubic-bezier(.22,.8,.3,1);
-    }
-
-    .expertise-chart.is-visible .segment-one { stroke-dasharray: 128 440; }
-    .expertise-chart.is-visible .segment-two { stroke-dasharray: 105 440; }
-    .expertise-chart.is-visible .segment-three { stroke-dasharray: 84 440; }
-    .expertise-chart.is-visible .segment-four { stroke-dasharray: 97 440; }
-
-    .segment-one { stroke-dashoffset: 0; }
-    .segment-two { stroke-dashoffset: -132; }
-    .segment-three { stroke-dashoffset: -241; }
-    .segment-four { stroke-dashoffset: -329; }
-
-    .legend {
-      display: grid;
-      gap: 17px;
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 13px;
-    }
-
-    .legend-dot {
-      width: 13px;
-      height: 13px;
-      margin-top: 5px;
-      flex-shrink: 0;
-      border-radius: 4px;
-    }
-
-    .legend-item strong {
-      display: block;
-      color: var(--navy);
-      font-size: .91rem;
-    }
-
-    .legend-item span {
-      display: block;
-      margin-top: 2px;
-      color: var(--muted);
-      font-size: .81rem;
-    }
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 11px;
-      margin-top: 32px;
-    }
-
-    .skill {
-      padding: 13px 14px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: white;
-      color: #35445a;
-      font-size: .82rem;
-      font-weight: 600;
-      transition: transform .2s, border-color .2s;
-    }
-
-    .skill:hover {
-      transform: translateY(-2px);
-      border-color: #b8c9ef;
-    }
-
-    /* Contact */
-
-    .contact-panel {
-      position: relative;
-      overflow: hidden;
-      padding: clamp(28px, 5vw, 55px);
-      border-radius: 28px;
-      background: var(--navy);
-      color: white;
-    }
-
-    .contact-panel::after {
-      content: "";
-      position: absolute;
-      top: -100px;
-      right: -80px;
-      width: 280px;
-      height: 280px;
-      border: 1px solid rgba(255,255,255,.13);
-      border-radius: 50%;
-      box-shadow: 0 0 0 35px rgba(255,255,255,.035),
-                  0 0 0 70px rgba(255,255,255,.025);
-      pointer-events: none;
-    }
-
-    .contact-panel h2 {
-      position: relative;
-      z-index: 1;
-      max-width: 650px;
-      margin: 12px 0;
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      line-height: 1.1;
-      letter-spacing: -.055em;
-    }
-
-    .contact-panel p {
-      position: relative;
-      z-index: 1;
-      max-width: 580px;
-      color: #d2dbea;
-    }
-
-    .contact-links {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 25px;
-    }
-
-    .contact-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 16px;
-      border: 1px solid rgba(255,255,255,.22);
-      border-radius: 12px;
-      color: white;
-      font-size: .87rem;
-      font-weight: 700;
-      transition: background .2s;
-    }
-
-    .contact-links a:hover { background: rgba(255,255,255,.1); }
-
-    /* Footer and modal */
-
-    .footer { padding: 26px 0; }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 15px;
-      color: var(--muted);
-      font-size: .79rem;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .footer-links a:hover { color: var(--blue-dark); }
-
-    .modal {
-      position: fixed;
-      inset: 0;
-      z-index: 100;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      background: rgba(10,20,36,.62);
-      backdrop-filter: blur(5px);
-    }
-
-    .modal.open { display: flex; }
-
-    .modal-dialog {
-      width: min(580px, 100%);
-      max-height: 85vh;
-      overflow: auto;
-      padding: 26px;
-      border-radius: 22px;
-      background: white;
-      box-shadow: 0 25px 90px rgba(0,0,0,.2);
-      animation: modalIn .25s ease both;
-    }
-
-    .modal-header {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-
-    .modal-header h2 {
-      margin: 0;
-      color: var(--navy);
-      font-size: 1.3rem;
-    }
-
-    .modal-header p {
-      margin: 5px 0 0;
-      color: var(--muted);
-      font-size: .84rem;
-    }
-
-    .modal-close {
-      display: grid;
-      place-items: center;
-      width: 38px;
-      height: 38px;
-      flex-shrink: 0;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: white;
-      color: var(--navy);
-      font-size: 1.35rem;
-      cursor: pointer;
-    }
-
-    .link-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 9px;
-    }
-
-    .gallery-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 13px 14px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      color: var(--navy);
-      font-size: .84rem;
-      font-weight: 600;
-      transition: background .2s, border-color .2s;
-    }
-
-    .gallery-link:hover {
-      background: #f2f6ff;
-      border-color: #c6d4f5;
-    }
-
-    .gallery-link span:last-child { color: var(--blue-dark); }
-
-    .modal-footnote {
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-size: .77rem;
-    }
-
-    /* Animations */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity .65s ease, transform .65s ease;
-    }
-
-    .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .hero-copy {
-      animation: heroIn .8s ease both;
-    }
-
-    .hero-photo-wrap {
-      animation: heroIn .9s .12s ease both;
-    }
-
-    @keyframes heroIn {
-      from { opacity: 0; transform: translateY(18px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes modalIn {
-      from { opacity: 0; transform: translateY(10px) scale(.99); }
-      to { opacity: 1; transform: translateY(0) scale(1); }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
-
-      .reveal { opacity: 1; transform: none; }
-    }
-
-    /* Responsive */
-
-    @media (max-width: 900px) {
-      .hero-grid { gap: 35px; }
-      .hero-photo { height: 440px; }
-      .metrics-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .about-grid { gap: 35px; }
-      .expertise-layout { gap: 25px; }
-      .nav-links { gap: 15px; }
-    }
-
-    @media (max-width: 700px) {
-      .container { width: min(var(--max), calc(100% - 32px)); }
-      .section { padding: 66px 0; }
-      .nav-inner { min-height: 66px; }
-      .menu-toggle { display: block; }
-
-      .nav-links {
-        position: absolute;
-        top: 66px;
-        left: 0;
-        right: 0;
-        display: none;
-        align-items: stretch;
-        flex-direction: column;
-        gap: 0;
-        padding: 12px 20px 18px;
-        border-bottom: 1px solid var(--line);
-        background: var(--bg);
-      }
-
-      .nav-links.open { display: flex; }
-      .nav-links a { padding: 12px 4px; }
-      .nav-links .nav-cta { text-align: center; }
-
-      .hero { padding: 48px 0 42px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 34px; }
-      h1 { font-size: clamp(2.8rem, 12vw, 4.4rem); }
-      .hero-photo-wrap { width: min(100% - 12px, 440px); margin: 0 auto 12px; }
-      .hero-photo { height: 430px; }
-      .photo-note { left: -10px; bottom: 14px; }
-
-      .metrics-grid { gap: 10px; }
-      .metric-card { padding: 19px 15px; }
-      .work-grid, .social-feature, .crm-layout, .about-grid, .expertise-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid { grid-template-columns: 1fr; }
-      .work-card, .brand-card { padding: 22px; }
-      .about-photo { height: 410px; max-width: 430px; }
-      .about-grid { gap: 30px; }
-      .expertise-layout { gap: 20px; }
-      .chart-panel { max-width: 320px; margin: 0 auto; }
-      .skills-grid { grid-template-columns: repeat(2, 1fr); }
-      .principles { grid-template-columns: 1fr 1fr; }
-      .link-list { grid-template-columns: 1fr; }
-      .modal-dialog { padding: 21px; }
-      .footer-inner { align-items: flex-start; flex-direction: column; }
-    }
-
-    @media (max-width: 390px) {
-      .metrics-grid { grid-template-columns: 1fr 1fr; }
-      .metric-value { font-size: 1.55rem; }
-      .principles { grid-template-columns: 1fr; }
-      .hero-photo { height: 370px; }
-      .skills-grid { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#14243a">
+<meta name="description" content="Sahib Khurana — marketing, growth, performance marketing, social media and strategy.">
+<title>Sahib Khurana | Marketing & Growth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#f7f8fa;
+  --white:#fff;
+  --navy:#14243a;
+  --blue:#477bff;
+  --blue-dark:#315fdb;
+  --text:#243247;
+  --muted:#64748b;
+  --line:#e3e8ef;
+  --shadow:0 16px 50px rgba(20,36,58,.08);
+  --radius:22px;
+  --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+body.modal-open{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.section{padding:82px 0}
+.section-alt{background:var(--white)}
+.kicker{display:inline-flex;align-items:center;gap:9px;color:var(--blue-dark);font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.kicker:before{content:"";width:22px;height:2px;background:currentColor}
+.section-heading{max-width:760px;margin:12px 0;color:var(--navy);font-size:clamp(2rem,4vw,3rem);line-height:1.13;letter-spacing:-.055em}
+.section-intro{max-width:700px;margin:0 0 30px;color:var(--muted)}
+.nav{position:sticky;top:0;z-index:20;background:rgba(247,248,250,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{color:var(--navy);font-size:1.15rem;font-weight:800;letter-spacing:-.04em}
+.brand span{color:var(--blue)}
+.nav-links{display:flex;align-items:center;gap:22px;color:#536176;font-size:.85rem;font-weight:600}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{padding:9px 14px;border-radius:999px;background:var(--navy);color:white!important}
+.menu-toggle{display:none;padding:9px 12px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--navy)}
+.hero{padding:72px 0 50px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:55px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--blue-dark);font-size:.76rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.eyebrow-dot{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px #477bff20}
+h1{margin:20px 0;color:var(--navy);font-size:clamp(2.6rem,5.3vw,4.6rem);line-height:1.04;letter-spacing:-.065em;font-weight:800}
+h1 .accent{color:var(--blue)}
+.hero-lede{max-width:570px;margin:0 0 14px;color:#536176;font-size:1.05rem}
+.hero-bio{max-width:550px;margin:0 0 25px;color:#748095;font-size:.96rem}
+.button-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border:1px solid transparent;border-radius:12px;font-size:.87rem;font-weight:700;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:var(--navy);color:white}
+.btn-primary:hover{background:#203954}
+.btn-secondary{background:white;border-color:#d7dee8;color:var(--navy)}
+.hero-photo-wrap{position:relative;width:100%;max-width:460px;margin-left:auto}
+.hero-photo{position:relative;z-index:1;display:block;width:100%;height:500px;object-fit:cover;object-position:center 34%;border-radius:28px;box-shadow:var(--shadow)}
+.photo-frame{position:absolute;inset:20px -15px -15px 20px;border:1px solid #cbd8ef;border-radius:28px}
+.photo-note{position:absolute;z-index:2;bottom:20px;left:-20px;padding:11px 15px;border:1px solid var(--line);border-radius:15px;background:white;color:var(--navy);box-shadow:var(--shadow);font-size:.82rem;font-weight:700}
+.photo-note small{display:block;color:var(--muted);font-size:.72rem;font-weight:500}
+.metrics{padding:8px 0 44px}
+.metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.metric-card{min-width:0;padding:22px 19px;border:1px solid var(--line);border-radius:18px;background:white;transition:transform .25s,box-shadow .25s}
+.metric-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.metric-value{color:var(--navy);font-size:clamp(1.45rem,3vw,2.1rem);font-weight:800;letter-spacing:-.06em;line-height:1.2}
+.metric-value.blue{color:var(--blue)}
+.metric-label{margin-top:8px;color:var(--text);font-size:.85rem;font-weight:700}
+.metric-note{margin-top:3px;color:var(--muted);font-size:.75rem}
+.work-grid,.social-feature{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.work-card,.brand-card,.gallery-card{border:1px solid var(--line);border-radius:var(--radius);background:white;transition:transform .25s,box-shadow .25s,border-color .25s}
+.work-card{padding:26px}
+.work-card:hover,.brand-card:hover,.gallery-card:hover{transform:translateY(-4px);border-color:#cbd8ef;box-shadow:var(--shadow)}
+.work-icon,.gallery-symbol{display:grid;place-items:center;width:45px;height:45px;border-radius:14px;background:#edf2ff;color:var(--blue-dark);font-size:1.25rem}
+.work-card h3{margin:17px 0 8px;color:var(--navy);font-size:1.18rem;letter-spacing:-.03em}
+.work-card p,.brand-card p{color:var(--muted);font-size:.89rem}
+.work-card p{margin:0}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{padding:6px 10px;border-radius:999px;background:#f1f4f8;color:#526176;font-size:.72rem;font-weight:600}
+.mini-metric{display:inline-flex;align-items:baseline;gap:8px;margin-top:17px}
+.mini-metric strong{color:var(--blue-dark);font-size:1.35rem;letter-spacing:-.05em}
+.mini-metric span{color:var(--muted);font-size:.79rem}
+.social-feature{margin-top:24px}
+.brand-card{display:flex;flex-direction:column;gap:13px;padding:24px}
+.brand-card-head{display:flex;align-items:center;gap:14px}
+.brand-mark{display:grid;place-items:center;width:50px;height:50px;border-radius:15px;background:#edf2ff;color:var(--navy);font-size:.9rem;font-weight:800}
+.brand-card h3{margin:0;color:var(--navy);font-size:1.05rem}
+.brand-card p{margin:3px 0 0}
+.brand-card-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:auto}
+.text-link{display:inline-flex;align-items:center;gap:7px;color:var(--blue-dark);font-size:.83rem;font-weight:700;background:none;border:0;padding:0;cursor:pointer}
+.text-link:hover{text-decoration:underline}
+.consulting-line{margin-top:20px;padding:18px 20px;border:1px dashed #cdd7e5;border-radius:16px;color:var(--muted);font-size:.9rem}
+.consulting-line strong{color:var(--navy)}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery-card{display:flex;flex-direction:column;min-height:215px;padding:22px}
+.gallery-card h3{margin:15px 0 7px;color:var(--navy);font-size:1.04rem}
+.gallery-card p{flex:1;margin:0 0 19px;color:var(--muted);font-size:.84rem}
+.gallery-card .btn{width:100%;padding:11px 12px;font-size:.81rem}
+.crm-layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px}
+.crm-points{display:grid;gap:15px;margin-top:24px}
+.crm-point{display:flex;align-items:flex-start;gap:12px}
+.check{display:grid;place-items:center;width:24px;height:24px;flex-shrink:0;border-radius:50%;background:#e8f0ff;color:var(--blue-dark);font-size:.8rem;font-weight:800}
+.crm-point strong{display:block;color:var(--navy);font-size:.9rem}
+.crm-point span{display:block;color:var(--muted);font-size:.82rem}
+.process-card{padding:27px;border-radius:var(--radius);background:var(--navy);color:white;box-shadow:var(--shadow)}
+.process-card h3{margin:0 0 20px;font-size:1.15rem}
+.process-step{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid #ffffff24}
+.step-num{display:grid;place-items:center;width:34px;height:34px;flex-shrink:0;border-radius:11px;background:#477bff38;color:#a9c0ff;font-size:.8rem;font-weight:800}
+.process-step strong{display:block;font-size:.88rem}
+.process-step small{color:#bac6d8;font-size:.77rem}
+.about-grid{display:grid;grid-template-columns:.82fr 1.18fr;align-items:center;gap:52px}
+.about-photo{width:100%;height:430px;object-fit:cover;object-position:center 28%;border-radius:24px;box-shadow:var(--shadow)}
+.about-copy p{margin:0 0 16px;color:var(--muted)}
+.about-quote{margin:24px 0;padding:5px 0 5px 18px;border-left:3px solid var(--blue);color:var(--navy);font-size:1.05rem;font-weight:600}
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}
+.principle{padding:15px;border:1px solid var(--line);border-radius:15px;background:white}
+.principle strong{display:block;color:var(--navy);font-size:.86rem}
+.principle span{display:block;margin-top:4px;color:var(--muted);font-size:.77rem}
+.expertise-layout{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:42px}
+.chart-panel{display:flex;justify-content:center;align-items:center;min-width:0}
+.expertise-chart{width:100%;max-width:340px;overflow:visible}
+.chart-segment{transform:rotate(-90deg);transform-origin:100px 100px;stroke-dasharray:0 440;transition:stroke-dasharray 1.3s cubic-bezier(.22,.8,.3,1)}
+.expertise-chart.is-visible .segment-one{stroke-dasharray:128 440}
+.expertise-chart.is-visible .segment-two{stroke-dasharray:105 440}
+.expertise-chart.is-visible .segment-three{stroke-dasharray:84 440}
+.expertise-chart.is-visible .segment-four{stroke-dasharray:97 440}
+.segment-one{stroke-dashoffset:0}
+.segment-two{stroke-dashoffset:-132}
+.segment-three{stroke-dashoffset:-241}
+.segment-four{stroke-dashoffset:-329}
+.legend{display:grid;gap:17px}
+.legend-item{display:flex;align-items:flex-start;gap:13px}
+.legend-dot{width:13px;height:13px;margin-top:5px;flex-shrink:0;border-radius:4px}
+.legend-item strong{display:block;color:var(--navy);font-size:.9rem}
+.legend-item span{display:block;margin-top:2px;color:var(--muted);font-size:.81rem}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin-top:30px}
+.skill{padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:white;color:#35445a;font-size:.81rem;font-weight:600;transition:transform .2s,border-color .2s}
+.skill:hover{transform:translateY(-2px);border-color:#b8c9ef}
+.contact-panel{position:relative;overflow:hidden;padding:clamp(28px,5vw,55px);border-radius:28px;background:var(--navy);color:white}
+.contact-panel:after{content:"";position:absolute;top:-100px;right:-80px;width:280px;height:280px;border:1px solid #ffffff22;border-radius:50%;box-shadow:0 0 0 35px #ffffff09,0 0 0 70px #ffffff06;pointer-events:none}
+.contact-panel h2{position:relative;z-index:1;max-width:650px;margin:12px 0;font-size:clamp(2rem,4vw,3.1rem);line-height:1.1;letter-spacing:-.055em}
+.contact-panel p{position:relative;z-index:1;max-width:580px;color:#d2dbea}
+.contact-links{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+.contact-links a{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border:1px solid #ffffff38;border-radius:12px;color:white;font-size:.87rem;font-weight:700;transition:background .2s}
+.contact-links a:hover{background:#ffffff19}
+.footer{padding:26px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px;color:var(--muted);font-size:.79rem}
+.footer-links{display:flex;flex-wrap:wrap;gap:18px}
+.footer-links a:hover{color:var(--blue-dark)}
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:20px;background:#0a14249e;backdrop-filter:blur(5px)}
+.modal.open{display:flex}
+.modal-dialog{width:min(580px,100%);max-height:85vh;overflow:auto;padding:25px;border-radius:22px;background:white;box-shadow:0 25px 90px #0003;animation:modalIn .25s ease both}
+.modal-header{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+.modal-header h2{margin:0;color:var(--navy);font-size:1.3rem}
+.modal-header p{margin:5px 0 0;color:var(--muted);font-size:.84rem}
+.modal-close{display:grid;place-items:center;width:38px;height:38px;flex-shrink:0;border:1px solid var(--line);border-radius:12px;background:white;color:var(--navy);font-size:1.35rem;cursor:pointer}
+.link-list{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.gallery-link{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border:1px solid var(--line);border-radius:12px;color:var(--navy);font-size:.84rem;font-weight:600;transition:background .2s,border-color .2s}
+.gallery-link:hover{background:#f2f6ff;border-color:#c6d4f5}
+.gallery-link span:last-child{color:var(--blue-dark)}
+.modal-footnote{margin:18px 0 0;color:var(--muted);font-size:.77rem}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+.hero-copy{animation:heroIn .8s ease both}
+.hero-photo-wrap{animation:heroIn .9s .12s ease both}
+@keyframes heroIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes modalIn{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+@media(max-width:900px){
+  .hero-grid{gap:32px}.hero-photo{height:440px}
+  .metrics-grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{gap:32px}.expertise-layout{gap:25px}.nav-links{gap:14px}
+}
+@media(max-width:700px){
+  .container{width:min(var(--max),calc(100% - 32px))}
+  .section{padding:62px 0}
+  .nav-inner{min-height:65px}.menu-toggle{display:block;cursor:pointer}
+  .nav-links{position:absolute;top:65px;left:0;right:0;display:none;align-items:stretch;flex-direction:column;gap:0;padding:12px 20px 18px;border-bottom:1px solid var(--line);background:var(--bg)}
+  .nav-links.open{display:flex}.nav-links a{padding:12px 4px}.nav-links .nav-cta{text-align:center}
+  .hero{padding:45px 0 38px}.hero-grid{grid-template-columns:1fr;gap:32px}
+  h1{font-size:clamp(2.55rem,10vw,4rem)}
+  .hero-photo-wrap{width:min(100% - 12px,440px);margin:0 auto 12px}
+  .hero-photo{height:430px}.photo-note{left:-10px;bottom:14px}
+  .metrics-grid{gap:10px}.metric-card{padding:18px 14px}
+  .work-grid,.social-feature,.crm-layout,.about-grid,.expertise-layout{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:1fr}
+  .work-card,.brand-card{padding:21px}
+  .about-photo{height:400px;max-width:430px}
+  .about-grid{gap:28px}.chart-panel{max-width:320px;margin:auto}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .principles{grid-template-columns:1fr 1fr}
+  .link-list{grid-template-columns:1fr}.modal-dialog{padding:20px}
+  .footer-inner{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:390px){
+  .metric-value{font-size:1.45rem}.principles{grid-template-columns:1fr}
+  .hero-photo{height:370px}.skills-grid{grid-template-columns:1fr 1fr}
+}
+</style>
 </head>
 
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a class="brand" href="#home">Sahib Khurana<span>.</span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
-      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#social">Social</a>
-        <a href="#creator">Creators</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a class="nav-cta" href="#contact">Let's connect ↗</a>
-      </nav>
-    </div>
-  </header>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">Sahib Khurana<span>.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#social">Social</a>
+      <a href="#creator">Creators</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a class="nav-cta" href="#contact">Let's connect ↗</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> Marketing · Growth · Strategy</div>
-          <h1>Driving growth through <span class="accent">marketing.</span></h1>
-          <p class="hero-lede">Performance marketing, content strategy, creator partnerships and conversion-focused systems.</p>
-          <p class="hero-bio">Into marketing, growth, and strategy, while building a few side hustles along the way.</p>
-          <div class="button-row">
-            <a class="btn btn-primary" href="#work">Explore my work ↓</a>
-            <a class="btn btn-secondary" href="#contact">Let's connect ↗</a>
-          </div>
-        </div>
-
-        <div class="hero-photo-wrap">
-          <div class="photo-frame"></div>
-          <img class="hero-photo" src="assets/photo-1.jpeg" alt="Sahib Khurana seated in a relaxed portrait" fetchpriority="high">
-          <div class="photo-note">Sahib Khurana<small>Marketing · Growth · Strategy</small></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- IMPACT METRICS -->
-    <section class="metrics" aria-label="Marketing impact">
-      <div class="container metrics-grid">
-        <article class="metric-card reveal">
-          <div class="metric-value blue count-up" data-target="100000" data-format="leads">1L+</div>
-          <div class="metric-label">Leads generated</div>
-          <div class="metric-note">Across reported campaigns</div>
-        </article>
-        <article class="metric-card reveal">
-          <div class="metric-value count-up" data-target="500" data-format="cpl">₹60–₹500</div>
-          <div class="metric-label">Reported CPL range</div>
-          <div class="metric-note">Campaign-dependent</div>
-        </article>
-        <article class="metric-card reveal">
-          <div class="metric-value blue count-up" data-target="10000000" data-format="views">10M+</div>
-          <div class="metric-label">WeMakeScholars views</div>
-          <div class="metric-note">Total views</div>
-        </article>
-        <article class="metric-card reveal">
-          <div class="metric-value count-up" data-target="300000" data-format="adwisko">3L+</div>
-          <div class="metric-label">Adwisko views</div>
-          <div class="metric-note">Total views</div>
-        </article>
-      </div>
-    </section>
-
-    <!-- PERFORMANCE MARKETING -->
-    <section class="section section-alt" id="work">
-      <div class="container">
-        <div class="reveal">
-          <div class="kicker">01 / Performance</div>
-          <h2 class="section-heading">Turning acquisition into measurable growth.</h2>
-          <p class="section-intro">Managed and optimised performance marketing campaigns across education, scholarships, education loans and hiring, focusing on lead generation, audience targeting and acquisition efficiency.</p>
-        </div>
-
-        <div class="work-grid">
-          <article class="work-card reveal">
-            <div class="work-icon">↗</div>
-            <h3>Education & Scholarship Campaigns</h3>
-            <p>Campaign planning, audience targeting, lead generation and optimisation across education and scholarship initiatives.</p>
-            <div class="tag-row">
-              <span class="tag">Meta Ads</span>
-              <span class="tag">Google Ads</span>
-              <span class="tag">Lead Generation</span>
-              <span class="tag">CPL Optimisation</span>
-            </div>
-            <div class="mini-metric"><strong>1L+</strong><span>reported leads across campaigns</span></div>
-          </article>
-
-          <article class="work-card reveal">
-            <div class="work-icon">◎</div>
-            <h3>Hiring Campaigns</h3>
-            <p>Performance campaign execution and optimisation to support recruitment and hiring-related acquisition objectives.</p>
-            <div class="tag-row">
-              <span class="tag">Campaign Strategy</span>
-              <span class="tag">Audience Testing</span>
-              <span class="tag">Lead Quality</span>
-              <span class="tag">Reporting</span>
-            </div>
-            <div class="mini-metric"><strong>₹60–₹500</strong><span>reported CPL range across campaigns</span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOCIAL MEDIA -->
-    <section class="section" id="social">
-      <div class="container">
-        <div class="reveal">
-          <div class="kicker">02 / Social Media</div>
-          <h2 class="section-heading">Growing audiences through content and consistency.</h2>
-          <p class="section-intro">End-to-end social media management covering content strategy, creative planning, publishing, audience growth and identifying content that resonates.</p>
-        </div>
-
-        <div class="social-feature">
-          <article class="brand-card reveal">
-            <div class="brand-card-head">
-              <div class="brand-mark">WMS</div>
-              <div>
-                <h3>WeMakeScholars</h3>
-                <p>Social media growth & content strategy</p>
-              </div>
-            </div>
-            <div class="mini-metric"><strong>10M+</strong><span>total views</span></div>
-            <p>End-to-end social media management, content planning, publishing and audience growth.</p>
-            <div class="brand-card-bottom">
-              <a class="text-link" href="https://www.instagram.com/wemakescholars/" target="_blank" rel="noopener noreferrer">View Instagram ↗</a>
-              <button class="text-link open-gallery" data-gallery="wms" type="button">Explore selected content ↗</button>
-            </div>
-          </article>
-
-          <article class="brand-card reveal">
-            <div class="brand-card-head">
-              <div class="brand-mark">AD</div>
-              <div>
-                <h3>Adwisko</h3>
-                <p>Content strategy & social media growth</p>
-              </div>
-            </div>
-            <div class="mini-metric"><strong>3L+</strong><span>total views</span></div>
-            <p>Content strategy and publishing, with selected Reels chosen for their views, shares and comments.</p>
-            <div class="brand-card-bottom">
-              <a class="text-link" href="https://www.instagram.com/adwisko.official/" target="_blank" rel="noopener noreferrer">View Instagram ↗</a>
-              <button class="text-link open-gallery" data-gallery="adwisko" type="button">Explore selected content ↗</button>
-            </div>
-          </article>
-        </div>
-
-        <div class="consulting-line reveal">
-          <strong>Additional consulting experience:</strong> FancyPlate and SwissCastle Bakery — copywriting strategy, follower-growth guidance and campaign planning.
-          <div class="tag-row">
-            <a class="tag" href="https://www.instagram.com/fancyplate_mumbai/" target="_blank" rel="noopener noreferrer">FancyPlate ↗</a>
-            <a class="tag" href="https://www.instagram.com/swisscastlebakery/" target="_blank" rel="noopener noreferrer">SwissCastle Bakery ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INFLUENCER / UGC -->
-    <section class="section section-alt" id="creator">
-      <div class="container">
-        <div class="reveal">
-          <div class="kicker">03 / Creator Marketing</div>
-          <h2 class="section-heading">Creator partnerships and content that connect.</h2>
-          <p class="section-intro">End-to-end influencer coordination and creator-led content initiatives, organised into simple galleries so the portfolio stays easy to explore.</p>
-        </div>
-
-        <div class="gallery-grid">
-          <article class="gallery-card reveal">
-            <div class="gallery-symbol">↗</div>
-            <h3>Influencer Collaborations</h3>
-            <p>Seven selected collaboration videos from influencer campaigns.</p>
-            <button class="btn btn-secondary open-gallery" data-gallery="influencer" type="button">View collaborations ↗</button>
-          </article>
-
-          <article class="gallery-card reveal">
-            <div class="gallery-symbol">◎</div>
-            <h3>Instagram Creator Content</h3>
-            <p>A curated collection of creator-led Instagram posts and Reels. Creator names are omitted.</p>
-            <button class="btn btn-secondary open-gallery" data-gallery="ugcInstagram" type="button">Explore Instagram collection ↗</button>
-          </article>
-
-          <article class="gallery-card reveal">
-            <div class="gallery-symbol">▷</div>
-            <h3>YouTube Shorts</h3>
-            <p>Selected creator-led short-form video content on YouTube.</p>
-            <button class="btn btn-secondary open-gallery" data-gallery="youtube" type="button">Explore YouTube Shorts ↗</button>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CRM -->
-    <section class="section" id="crm">
-      <div class="container crm-layout">
-        <div class="reveal">
-          <div class="kicker">04 / CRM & Automation</div>
-          <h2 class="section-heading">Connecting campaign leads to the conversion journey.</h2>
-          <p class="section-intro">Contributed to building a CRM system used to track leads from Meta and Google campaigns and provide visibility into lead status, assignments and follow-up operations.</p>
-
-          <div class="crm-points">
-            <div class="crm-point">
-              <div class="check">✓</div>
-              <div><strong>Lead lifecycle tracking</strong><span>Visibility into lead statuses and progression.</span></div>
-            </div>
-            <div class="crm-point">
-              <div class="check">✓</div>
-              <div><strong>Assignment and follow-up workflows</strong><span>Support for lead ownership and follow-up operations.</span></div>
-            </div>
-            <div class="crm-point">
-              <div class="check">✓</div>
-              <div><strong>WhatsApp marketing</strong><span>Campaign planning, segmentation and follow-up communication.</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="process-card reveal">
-          <h3>From acquisition to follow-up</h3>
-          <div class="process-step">
-            <div class="step-num">01</div>
-            <div><strong>Campaign acquisition</strong><small>Meta Ads & Google Ads</small></div>
-          </div>
-          <div class="process-step">
-            <div class="step-num">02</div>
-            <div><strong>Lead captured in CRM</strong><small>Source and status visibility</small></div>
-          </div>
-          <div class="process-step">
-            <div class="step-num">03</div>
-            <div><strong>Assignment & follow-up</strong><small>Lead ownership and communication</small></div>
-          </div>
-          <div class="process-step">
-            <div class="step-num">04</div>
-            <div><strong>Application progress</strong><small>Track the next stage of the journey</small></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section section-alt" id="about">
-      <div class="container about-grid">
-        <div class="reveal">
-          <img class="about-photo" src="assets/photo-2.jpeg" alt="Sahib Khurana in a candid close-up portrait" loading="lazy">
-        </div>
-
-        <div class="about-copy reveal">
-          <div class="kicker">A little about me</div>
-          <h2 class="section-heading">Curious about what makes growth happen.</h2>
-          <p>I'm interested in the intersection of marketing, growth and strategy — from acquiring the right audience to creating content people want to engage with and building systems that support conversion.</p>
-          <p>I enjoy working across channels, testing ideas, learning from data and collaborating with teams to turn plans into execution.</p>
-
-          <div class="about-quote">“Into marketing, growth, and strategy, while building a few side hustles along the way.”</div>
-
-          <div class="principles">
-            <div class="principle"><strong>Test before scaling</strong><span>Use data to guide optimisation.</span></div>
-            <div class="principle"><strong>Content with purpose</strong><span>Connect creative work to audience needs.</span></div>
-            <div class="principle"><strong>Beyond the lead</strong><span>Think about follow-up and conversion.</span></div>
-            <div class="principle"><strong>Build and experiment</strong><span>Keep learning beyond the day job.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERTISE CHART -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="reveal">
-          <div class="kicker">05 / Expertise</div>
-          <h2 class="section-heading">A mix of strategy, execution and systems.</h2>
-          <p class="section-intro">Four connected areas of marketing experience. The chart is illustrative of focus areas, not a percentage-based rating of skill.</p>
-        </div>
-
-        <div class="expertise-layout">
-          <div class="chart-panel reveal">
-            <svg id="expertiseChart" class="expertise-chart" viewBox="0 0 200 200" role="img" aria-label="Animated doughnut chart showing four marketing focus areas">
-              <circle cx="100" cy="100" r="68" fill="none" stroke="#e8edf4" stroke-width="28"/>
-              <circle class="chart-segment segment-one" cx="100" cy="100" r="68" fill="none" stroke="#477bff" stroke-width="28" stroke-linecap="butt"/>
-              <circle class="chart-segment segment-two" cx="100" cy="100" r="68" fill="none" stroke="#14243a" stroke-width="28" stroke-linecap="butt"/>
-              <circle class="chart-segment segment-three" cx="100" cy="100" r="68" fill="none" stroke="#8aa9e8" stroke-width="28" stroke-linecap="butt"/>
-              <circle class="chart-segment segment-four" cx="100" cy="100" r="68" fill="none" stroke="#aeb9c8" stroke-width="28" stroke-linecap="butt"/>
-              <circle cx="100" cy="100" r="46" fill="#fff"/>
-              <text x="100" y="95" text-anchor="middle" font-size="11" font-weight="700" fill="#14243a">Marketing</text>
-              <text x="100" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#14243a">expertise</text>
-            </svg>
-          </div>
-
-          <div class="legend reveal">
-            <div class="legend-item">
-              <div class="legend-dot" style="background:#477bff"></div>
-              <div><strong>Performance Marketing</strong><span>Campaign planning, lead generation and optimisation.</span></div>
-            </div>
-            <div class="legend-item">
-              <div class="legend-dot" style="background:#14243a"></div>
-              <div><strong>Social Media Growth</strong><span>Content strategy, publishing and audience development.</span></div>
-            </div>
-            <div class="legend-item">
-              <div class="legend-dot" style="background:#8aa9e8"></div>
-              <div><strong>Influencer & Creator Marketing</strong><span>Collaboration management and creator-led content.</span></div>
-            </div>
-            <div class="legend-item">
-              <div class="legend-dot" style="background:#aeb9c8"></div>
-              <div><strong>CRM & Marketing Automation</strong><span>Lead tracking, follow-up and conversion workflows.</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills-grid reveal">
-          <div class="skill">Performance Marketing</div>
-          <div class="skill">Campaign Strategy & Optimisation</div>
-          <div class="skill">Social Media Growth</div>
-          <div class="skill">Influencer Marketing</div>
-          <div class="skill">Affiliate Marketing</div>
-          <div class="skill">UGC & Creator Content</div>
-          <div class="skill">CRM & Marketing Automation</div>
-          <div class="skill">WhatsApp & Email Marketing</div>
-          <div class="skill">Campus Acquisition</div>
-          <div class="skill">Community Acquisition</div>
-          <div class="skill">Go-to-Market Strategy</div>
-          <div class="skill">Analytics & Reporting</div>
-          <div class="skill">Campaign Planning</div>
-          <div class="skill">Cross-functional Coordination</div>
-          <div class="skill">ChatGPT Ads*</div>
-          <div class="skill">Reddit Ads*</div>
-        </div>
-        <p style="margin-top:12px;color:#64748b;font-size:.76rem">*Keep these platform skills only to the extent that they accurately reflect your hands-on experience.</p>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section section-alt" id="contact">
-      <div class="container">
-        <div class="contact-panel reveal">
-          <div class="kicker" style="color:#a9c0ff">Let's connect</div>
-          <h2>Have a growth challenge in mind?</h2>
-          <p>Open to conversations around marketing opportunities, growth strategy, consulting projects and collaborations.</p>
-          <div class="contact-links">
-            <a href="mailto:sahibkhurana16@gmail.com">✉ Email me ↗</a>
-            <a href="https://www.linkedin.com/in/sahib-khurana-659a181b1/" target="_blank" rel="noopener noreferrer">in LinkedIn ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year">2026</span> Sahib Khurana. Built around growth and good work.</span>
-      <div class="footer-links">
-        <a href="mailto:sahibkhurana16@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/sahib-khurana-659a181b1/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        <a href="#home">Back to top ↑</a>
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> Marketing · Growth · Strategy</div>
+      <h1>Into marketing, growth, and strategy, while building a few <span class="accent">side hustles</span> along the way.</h1>
+      <p class="hero-lede">Performance marketing, content strategy, creator partnerships and conversion-focused systems.</p>
+      <div class="button-row">
+        <a class="btn btn-primary" href="#work">Explore my work ↓</a>
+        <a class="btn btn-secondary" href="#contact">Let's connect ↗</a>
       </div>
     </div>
-  </footer>
-
-  <!-- Expandable content galleries -->
-  <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-header">
-        <div>
-          <h2 id="modalTitle">Selected content</h2>
-          <p id="modalDescription">Open a link to view the original content.</p>
-        </div>
-        <button class="modal-close" id="modalClose" type="button" aria-label="Close gallery">×</button>
-      </div>
-      <div class="link-list" id="modalLinks"></div>
-      <p class="modal-footnote">Links open the original content on Instagram or YouTube in a new tab.</p>
+    <div class="hero-photo-wrap">
+      <div class="photo-frame"></div>
+      <img class="hero-photo" src="WhatsApp%20Image%202026-10-22%20at%205.43.14%20PM.jpeg" alt="Sahib Khurana seated in a relaxed portrait" fetchpriority="high">
+      <div class="photo-note">Sahib Khurana<small>Marketing · Growth · Strategy</small></div>
     </div>
   </div>
+</section>
 
-  <script>
-    const galleries = {
-      wms: {
-        title: "WeMakeScholars — selected Reels",
-        description: "A curated set of selected high-performing content.",
-        links: [
-          ["Reel 1", "https://www.instagram.com/reel/C2-I1HovCH7/?psln=cGR6Z2NiNjhnZ2Fh"],
-          ["Reel 2", "https://www.instagram.com/reel/C3F3PiRMaRi/?vrfl=MThuM2RhMXJ3M3FqZw=="],
-          ["Reel 3", "https://www.instagram.com/reel/DX8oSX6TgkB/?exln=emswMHFvczZoangz"],
-          ["Reel 4", "https://www.instagram.com/reel/DJEiJFGATzU/?rpxt=MWVjdGM1eDNhOWp4ZA=="],
-          ["Reel 5", "https://www.instagram.com/reel/DI_h6dbN5hi/?exln=ejA0MXZneW44bW9r"],
-          ["Reel 6", "https://www.instagram.com/reel/DIMHEeETdN0/?rpxt=eXRxamhndm5qc2Fu"],
-          ["Reel 7", "https://www.instagram.com/reel/DHbKRx5TyH3/?exln=MWppeWt1NW56ZTZkMA=="]
-        ]
-      },
+<section class="metrics" aria-label="Marketing impact">
+  <div class="container metrics-grid">
+    <article class="metric-card reveal">
+      <div class="metric-value blue count-up" data-format="leads">1L+</div>
+      <div class="metric-label">Leads generated</div>
+      <div class="metric-note">Across reported campaigns</div>
+    </article>
+    <article class="metric-card reveal">
+      <div class="metric-value count-up" data-format="cpl">₹60–₹500</div>
+      <div class="metric-label">Reported CPL range</div>
+      <div class="metric-note">Campaign-dependent</div>
+    </article>
+    <article class="metric-card reveal">
+      <div class="metric-value blue count-up" data-format="views">10M+</div>
+      <div class="metric-label">WeMakeScholars views</div>
+      <div class="metric-note">Total views</div>
+    </article>
+    <article class="metric-card reveal">
+      <div class="metric-value count-up" data-format="adwisko">3L+</div>
+      <div class="metric-label">Adwisko views</div>
+      <div class="metric-note">Total views</div>
+    </article>
+  </div>
+</section>
 
-      adwisko: {
-        title: "Adwisko — selected Reels",
-        description: "Selected content chosen for views, shares and comments.",
-        links: [
-          ["Reel 1", "https://www.instagram.com/reel/DbP8asnPWQz/?vrfl=MXZjZWdjYXRmc3U3dw=="],
-          ["Reel 2", "https://www.instagram.com/reel/DawsRZrPNRA/?exln=N2l3bmJ2dnMzOHow"],
-          ["Reel 3", "https://www.instagram.com/reel/DdwCdbGv_7o/?srtk=MWdrZ3B5aXAxenByeA=="],
-          ["Reel 4", "https://www.instagram.com/reel/DdTomp0OjcX/?exln=MXY5b2kwaHNleXMyNg=="]
-        ]
-      },
+<section class="section section-alt" id="work">
+  <div class="container">
+    <div class="reveal">
+      <div class="kicker">01 / Performance</div>
+      <h2 class="section-heading">Turning acquisition into measurable growth.</h2>
+      <p class="section-intro">Managed and optimised performance marketing campaigns across education, scholarships, education loans and hiring, focusing on lead generation, audience targeting and acquisition efficiency.</p>
+    </div>
+    <div class="work-grid">
+      <article class="work-card reveal">
+        <div class="work-icon">↗</div>
+        <h3>Education & Scholarship Campaigns</h3>
+        <p>Campaign planning, audience targeting, lead generation and optimisation across education and scholarship initiatives.</p>
+        <div class="tag-row"><span class="tag">Meta Ads</span><span class="tag">Google Ads</span><span class="tag">Lead Generation</span><span class="tag">CPL Optimisation</span></div>
+        <div class="mini-metric"><strong>1L+</strong><span>reported leads across campaigns</span></div>
+      </article>
+      <article class="work-card reveal">
+        <div class="work-icon">◎</div>
+        <h3>Hiring Campaigns</h3>
+        <p>Performance campaign execution and optimisation to support recruitment and hiring-related acquisition objectives.</p>
+        <div class="tag-row"><span class="tag">Campaign Strategy</span><span class="tag">Audience Testing</span><span class="tag">Lead Quality</span><span class="tag">Reporting</span></div>
+        <div class="mini-metric"><strong>₹60–₹500</strong><span>reported CPL range across campaigns</span></div>
+      </article>
+    </div>
+  </div>
+</section>
 
-      influencer: {
-        title: "Influencer collaborations",
-        description: "Seven selected collaboration videos.",
-        links: [
-          ["Collaboration 1", "https://www.instagram.com/reel/DHJHJccp3bJ/?srtk=YXJ5eWVlMmswOWJh"],
-          ["Collaboration 2", "https://www.instagram.com/reel/DG8J0OjTodk/?exln=Y2pwb2Q4OWxmbWd5"],
-          ["Collaboration 3", "https://www.instagram.com/reel/DHLIzECSnH5/?cplk=MWN0OGJ0dHl2NXlzeQ=="],
-          ["Collaboration 4", "https://www.instagram.com/reel/DJHghDLhbk8/?mdxt=MWx0eGVjbmNtbnlydA=="],
-          ["Collaboration 5", "https://www.instagram.com/reel/DWMHpIvioCS/?mdxt=MWhkdnI0a3AwZzR1cQ=="],
-          ["Collaboration 6", "https://www.instagram.com/reel/DWQg1-nk67f/?srtk=MTM2Z3FuNWpjNnVreg=="],
-          ["Collaboration 7", "https://www.instagram.com/reel/DW59QNBiTGV/?rpxt=MWx2aTdlZXZwcnF6cg=="]
-        ]
-      },
+<section class="section" id="social">
+  <div class="container">
+    <div class="reveal">
+      <div class="kicker">02 / Social Media</div>
+      <h2 class="section-heading">Growing audiences through content and consistency.</h2>
+      <p class="section-intro">End-to-end social media management covering content strategy, creative planning, publishing, audience growth and identifying content that resonates.</p>
+    </div>
+    <div class="social-feature">
+      <article class="brand-card reveal">
+        <div class="brand-card-head"><div class="brand-mark">WMS</div><div><h3>WeMakeScholars</h3><p>Social media growth & content strategy</p></div></div>
+        <div class="mini-metric"><strong>10M+</strong><span>total views</span></div>
+        <p>End-to-end social media management, content planning, publishing and audience growth.</p>
+        <div class="brand-card-bottom">
+          <a class="text-link" href="https://www.instagram.com/wemakescholars/" target="_blank" rel="noopener noreferrer">View Instagram ↗</a>
+          <button class="text-link open-gallery" data-gallery="wms" type="button">Explore selected content ↗</button>
+        </div>
+      </article>
+      <article class="brand-card reveal">
+        <div class="brand-card-head"><div class="brand-mark">AD</div><div><h3>Adwisko</h3><p>Content strategy & social media growth</p></div></div>
+        <div class="mini-metric"><strong>3L+</strong><span>total views</span></div>
+        <p>Content strategy and publishing, with selected Reels chosen for their views, shares and comments.</p>
+        <div class="brand-card-bottom">
+          <a class="text-link" href="https://www.instagram.com/adwisko.official/" target="_blank" rel="noopener noreferrer">View Instagram ↗</a>
+          <button class="text-link open-gallery" data-gallery="adwisko" type="button">Explore selected content ↗</button>
+        </div>
+      </article>
+    </div>
+    <div class="consulting-line reveal">
+      <strong>Additional consulting experience:</strong> FancyPlate and SwissCastle Bakery — copywriting strategy, follower-growth guidance and campaign planning.
+      <div class="tag-row">
+        <a class="tag" href="https://www.instagram.com/fancyplate_mumbai/" target="_blank" rel="noopener noreferrer">FancyPlate ↗</a>
+        <a class="tag" href="https://www.instagram.com/swisscastlebakery/" target="_blank" rel="noopener noreferrer">SwissCastle Bakery ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-      ugcInstagram: {
-        title: "Instagram creator-led content",
-        description: "Creator names are omitted; links open the original posts.",
-        links: [
-          ["Instagram video 1", "https://www.instagram.com/reels/Degua20hZTO/"],
-          ["Instagram video 2", "https://www.instagram.com/reels/DegdGQpM5pr/"],
-          ["Instagram video 3", "https://www.instagram.com/reels/DeqmetePeoI/"],
-          ["Instagram video 4", "https://www.instagram.com/reel/Dah-E0bpL90/?igsh=MWw4bGlramJmMHVybw=="],
-          ["Instagram video 5", "https://www.instagram.com/p/DZxJkAFNquw/"],
-          ["Instagram video 6", "https://www.instagram.com/p/DaKxXHixsIN/"],
-          ["Instagram video 7", "https://www.instagram.com/reel/DaWufJFMcBF/?igsh=MTFidmkxY3pxOWxseQ=="],
-          ["Instagram video 8", "https://www.instagram.com/reels/DakPUjsze0w/"],
-          ["Instagram video 9", "https://www.instagram.com/reels/DbDXDdkpziX/"],
-          ["Instagram video 10", "https://www.instagram.com/reel/DbA9gv6J5Hj/?igsh=OGNoaWU0aDh4N3Rn"],
-          ["Instagram video 11", "https://www.instagram.com/reel/DbGKmyETxz1/?igsh=cGV3MjJzbmFrZ2Nw"],
-          ["Instagram video 12", "https://www.instagram.com/reel/DbVBM6hOSvu/"],
-          ["Instagram video 13", "https://www.instagram.com/reel/DbYkz8IBy5O/?igsh=bDNxcjA5YnJ6dngw"],
-          ["Instagram video 14", "https://www.instagram.com/reels/DbdS-vuzlsb/"],
-          ["Instagram video 15", "https://www.instagram.com/reels/Db3HvixzCCO/"],
-          ["Instagram video 16", "https://www.instagram.com/reels/DclXuZ1v8mt/"],
-          ["Instagram video 17", "https://www.instagram.com/reel/DcnDspmyZsU/"],
-          ["Instagram video 18", "https://www.instagram.com/reel/DdG6y4LxDne/?stkn=eXliY2p4eTJvYnV5"],
-          ["Instagram video 19", "https://www.instagram.com/reels/DdW_by5TM5R/"],
-          ["Instagram video 20", "https://www.instagram.com/reels/DdeG27RSCN5/"],
-          ["Instagram video 21", "https://www.instagram.com/reel/DdlyV8TTopj/?stkn=MW5jZmt0Y25qYnNqZw=="],
-          ["Instagram video 22", "https://www.instagram.com/reel/Dd9GcAkTyPC/?stkn=emUyMjJrOWpnZXZ1"],
-          ["Instagram video 23", "https://www.instagram.com/reel/DeCL8ccoVku/"],
-          ["Instagram video 24", "https://www.instagram.com/reel/DeBx1cehFeX/?stkn=azRxZjQ0ZzA3ejBu"]
-        ]
-      },
+<section class="section section-alt" id="creator">
+  <div class="container">
+    <div class="reveal">
+      <div class="kicker">03 / Creator Marketing</div>
+      <h2 class="section-heading">Creator partnerships and content that connect.</h2>
+      <p class="section-intro">End-to-end influencer coordination and creator-led content initiatives, organised into simple galleries so the portfolio stays easy to explore.</p>
+    </div>
+    <div class="gallery-grid">
+      <article class="gallery-card reveal"><div class="gallery-symbol">↗</div><h3>Influencer Collaborations</h3><p>Seven selected collaboration videos from influencer campaigns.</p><button class="btn btn-secondary open-gallery" data-gallery="influencer" type="button">View collaborations ↗</button></article>
+      <article class="gallery-card reveal"><div class="gallery-symbol">◎</div><h3>Instagram Creator Content</h3><p>A curated collection of creator-led Instagram posts and Reels. Creator names are omitted.</p><button class="btn btn-secondary open-gallery" data-gallery="ugcInstagram" type="button">Explore Instagram collection ↗</button></article>
+      <article class="gallery-card reveal"><div class="gallery-symbol">▷</div><h3>YouTube Shorts</h3><p>Selected creator-led short-form video content on YouTube.</p><button class="btn btn-secondary open-gallery" data-gallery="youtube" type="button">Explore YouTube Shorts ↗</button></article>
+    </div>
+  </div>
+</section>
 
-      youtube: {
-        title: "YouTube Shorts",
-        description: "Selected creator-led short-form videos.",
-        links: [
-          ["YouTube Short 1", "https://www.youtube.com/shorts/8I1dvvzvp9A"],
-          ["YouTube Short 2", "https://www.youtube.com/shorts/7utTex5iQ3Y"]
-        ]
+<section class="section" id="crm">
+  <div class="container crm-layout">
+    <div class="reveal">
+      <div class="kicker">04 / CRM & Automation</div>
+      <h2 class="section-heading">Connecting campaign leads to the conversion journey.</h2>
+      <p class="section-intro">Contributed to building a CRM system used to track leads from Meta and Google campaigns and provide visibility into lead status, assignments and follow-up operations.</p>
+      <div class="crm-points">
+        <div class="crm-point"><div class="check">✓</div><div><strong>Lead lifecycle tracking</strong><span>Visibility into lead statuses and progression.</span></div></div>
+        <div class="crm-point"><div class="check">✓</div><div><strong>Assignment and follow-up workflows</strong><span>Support for lead ownership and follow-up operations.</span></div></div>
+        <div class="crm-point"><div class="check">✓</div><div><strong>WhatsApp marketing</strong><span>Campaign planning, segmentation and follow-up communication.</span></div></div>
+      </div>
+    </div>
+    <div class="process-card reveal">
+      <h3>From acquisition to follow-up</h3>
+      <div class="process-step"><div class="step-num">01</div><div><strong>Campaign acquisition</strong><small>Meta Ads & Google Ads</small></div></div>
+      <div class="process-step"><div class="step-num">02</div><div><strong>Lead captured in CRM</strong><small>Source and status visibility</small></div></div>
+      <div class="process-step"><div class="step-num">03</div><div><strong>Assignment & follow-up</strong><small>Lead ownership and communication</small></div></div>
+      <div class="process-step"><div class="step-num">04</div><div><strong>Application progress</strong><small>Track the next stage of the journey</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt" id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <img class="about-photo" src="WhatsApp%20Image%202026-10-22%20at%205.44.19%20PM.jpeg" alt="Sahib Khurana in a candid close-up portrait" loading="lazy">
+    </div>
+    <div class="about-copy reveal">
+      <div class="kicker">A little about me</div>
+      <h2 class="section-heading">Curious about what makes growth happen.</h2>
+      <p>I'm interested in the intersection of marketing, growth and strategy — from acquiring the right audience to creating content people want to engage with and building systems that support conversion.</p>
+      <p>I enjoy working across channels, testing ideas, learning from data and collaborating with teams to turn plans into execution.</p>
+      <div class="about-quote">“Into marketing, growth, and strategy, while building a few side hustles along the way.”</div>
+      <div class="principles">
+        <div class="principle"><strong>Test before scaling</strong><span>Use data to guide optimisation.</span></div>
+        <div class="principle"><strong>Content with purpose</strong><span>Connect creative work to audience needs.</span></div>
+        <div class="principle"><strong>Beyond the lead</strong><span>Think about follow-up and conversion.</span></div>
+        <div class="principle"><strong>Build and experiment</strong><span>Keep learning beyond the day job.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container">
+    <div class="reveal">
+      <div class="kicker">05 / Expertise</div>
+      <h2 class="section-heading">A mix of strategy, execution and systems.</h2>
+      <p class="section-intro">Four connected areas of marketing experience. The chart is illustrative of focus areas, not a percentage-based rating of skill.</p>
+    </div>
+    <div class="expertise-layout">
+      <div class="chart-panel reveal">
+        <svg id="expertiseChart" class="expertise-chart" viewBox="0 0 200 200" role="img" aria-label="Animated doughnut chart showing four marketing focus areas">
+          <circle cx="100" cy="100" r="68" fill="none" stroke="#e8edf4" stroke-width="28"/>
+          <circle class="chart-segment segment-one" cx="100" cy="100" r="68" fill="none" stroke="#477bff" stroke-width="28"/>
+          <circle class="chart-segment segment-two" cx="100" cy="100" r="68" fill="none" stroke="#14243a" stroke-width="28"/>
+          <circle class="chart-segment segment-three" cx="100" cy="100" r="68" fill="none" stroke="#8aa9e8" stroke-width="28"/>
+          <circle class="chart-segment segment-four" cx="100" cy="100" r="68" fill="none" stroke="#aeb9c8" stroke-width="28"/>
+          <circle cx="100" cy="100" r="46" fill="#fff"/>
+          <text x="100" y="95" text-anchor="middle" font-size="11" font-weight="700" fill="#14243a">Marketing</text>
+          <text x="100" y="110" text-anchor="middle" font-size="11" font-weight="700" fill="#14243a">expertise</text>
+        </svg>
+      </div>
+      <div class="legend reveal">
+        <div class="legend-item"><div class="legend-dot" style="background:#477bff"></div><div><strong>Performance Marketing</strong><span>Campaign planning, lead generation and optimisation.</span></div></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#14243a"></div><div><strong>Social Media Growth</strong><span>Content strategy, publishing and audience development.</span></div></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#8aa9e8"></div><div><strong>Influencer & Creator Marketing</strong><span>Collaboration management and creator-led content.</span></div></div>
+        <div class="legend-item"><div class="legend-dot" style="background:#aeb9c8"></div><div><strong>CRM & Marketing Automation</strong><span>Lead tracking, follow-up and conversion workflows.</span></div></div>
+      </div>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill">Performance Marketing</div><div class="skill">Campaign Strategy & Optimisation</div><div class="skill">Social Media Growth</div>
+      <div class="skill">Influencer Marketing</div><div class="skill">Affiliate Marketing</div><div class="skill">UGC & Creator Content</div>
+      <div class="skill">CRM & Marketing Automation</div><div class="skill">WhatsApp & Email Marketing</div><div class="skill">Campus Acquisition</div>
+      <div class="skill">Community Acquisition</div><div class="skill">Go-to-Market Strategy</div><div class="skill">Analytics & Reporting</div>
+      <div class="skill">Campaign Planning</div><div class="skill">Cross-functional Coordination</div><div class="skill">ChatGPT Ads*</div><div class="skill">Reddit Ads*</div>
+    </div>
+    <p style="margin-top:12px;color:#64748b;font-size:.76rem">*Keep these platform skills only to the extent that they accurately reflect your hands-on experience.</p>
+  </div>
+</section>
+
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <div class="contact-panel reveal">
+      <div class="kicker" style="color:#a9c0ff">Let's connect</div>
+      <h2>Have a growth challenge in mind?</h2>
+      <p>Open to conversations around marketing opportunities, growth strategy, consulting projects and collaborations.</p>
+      <div class="contact-links">
+        <a href="mailto:sahibkhurana16@gmail.com">✉ Email me ↗</a>
+        <a href="https://www.linkedin.com/in/sahib-khurana-659a181b1/" target="_blank" rel="noopener noreferrer">in LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Sahib Khurana. Built around growth and good work.</span>
+    <div class="footer-links"><a href="mailto:sahibkhurana16@gmail.com">Email</a><a href="https://www.linkedin.com/in/sahib-khurana-659a181b1/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#home">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-header">
+      <div><h2 id="modalTitle">Selected content</h2><p id="modalDescription">Open a link to view the original content.</p></div>
+      <button class="modal-close" id="modalClose" type="button" aria-label="Close gallery">×</button>
+    </div>
+    <div class="link-list" id="modalLinks"></div>
+    <p class="modal-footnote">Links open the original content on Instagram or YouTube in a new tab.</p>
+  </div>
+</div>
+
+<script>
+const galleries = {
+  wms: {
+    title:"WeMakeScholars — selected Reels",
+    description:"A curated set of selected high-performing content.",
+    links:[
+      ["Reel 1","https://www.instagram.com/reel/C2-I1HovCH7/?psln=cGR6Z2NiNjhnZ2Fh"],
+      ["Reel 2","https://www.instagram.com/reel/C3F3PiRMaRi/?vrfl=MThuM2RhMXJ3M3FqZw=="],
+      ["Reel 3","https://www.instagram.com/reel/DX8oSX6TgkB/?exln=emswMHFvczZoangz"],
+      ["Reel 4","https://www.instagram.com/reel/DJEiJFGATzU/?rpxt=MWVjdGM1eDNhOWp4ZA=="],
+      ["Reel 5","https://www.instagram.com/reel/DI_h6dbN5hi/?exln=ejA0MXZneW44bW9r"],
+      ["Reel 6","https://www.instagram.com/reel/DIMHEeETdN0/?rpxt=eXRxamhndm5qc2Fu"],
+      ["Reel 7","https://www.instagram.com/reel/DHbKRx5TyH3/?exln=MWppeWt1NW56ZTZkMA=="]
+    ]
+  },
+  adwisko: {
+    title:"Adwisko — selected Reels",
+    description:"Selected content chosen for views, shares and comments.",
+    links:[
+      ["Reel 1","https://www.instagram.com/reel/DbP8asnPWQz/?vrfl=MXZjZWdjYXRmc3U3dw=="],
+      ["Reel 2","https://www.instagram.com/reel/DawsRZrPNRA/?exln=N2l3bmJ2dnMzOHow"],
+      ["Reel 3","https://www.instagram.com/reel/DdwCdbGv_7o/?srtk=MWdrZ3B5aXAxenByeA=="],
+      ["Reel 4","https://www.instagram.com/reel/DdTomp0OjcX/?exln=MXY5b2kwaHNleXMyNg=="]
+    ]
+  },
+  influencer: {
+    title:"Influencer collaborations",
+    description:"Seven selected collaboration videos.",
+    links:[
+      ["Collaboration 1","https://www.instagram.com/reel/DHJHJccp3bJ/?srtk=YXJ5eWVlMmswOWJh"],
+      ["Collaboration 2","https://www.instagram.com/reel/DG8J0OjTodk/?exln=Y2pwb2Q4OWxmbWd5"],
+      ["Collaboration 3","https://www.instagram.com/reel/DHLIzECSnH5/?cplk=MWN0OGJ0dHl2NXlzeQ=="],
+      ["Collaboration 4","https://www.instagram.com/reel/DJHghDLhbk8/?mdxt=MWx0eGVjbmNtbnlydA=="],
+      ["Collaboration 5","https://www.instagram.com/reel/DWMHpIvioCS/?mdxt=MWhkdnI0a3AwZzR1cQ=="],
+      ["Collaboration 6","https://www.instagram.com/reel/DWQg1-nk67f/?srtk=MTM2Z3FuNWpjNnVreg=="],
+      ["Collaboration 7","https://www.instagram.com/reel/DW59QNBiTGV/?rpxt=MWx2aTdlZXZwcnF6cg=="]
+    ]
+  },
+  ugcInstagram: {
+    title:"Instagram creator-led content",
+    description:"Creator names are omitted; links open the original posts.",
+    links:[
+      ["Instagram video 1","https://www.instagram.com/reels/Degua20hZTO/"],
+      ["Instagram video 2","https://www.instagram.com/reels/DegdGQpM5pr/"],
+      ["Instagram video 3","https://www.instagram.com/reels/DeqmetePeoI/"],
+      ["Instagram video 4","https://www.instagram.com/reel/Dah-E0bpL90/?igsh=MWw4bGlramJmMHVybw=="],
+      ["Instagram video 5","https://www.instagram.com/p/DZxJkAFNquw/"],
+      ["Instagram video 6","https://www.instagram.com/p/DaKxXHixsIN/"],
+      ["Instagram video 7","https://www.instagram.com/reel/DaWufJFMcBF/?igsh=MTFidmkxY3pxOWxseQ=="],
+      ["Instagram video 8","https://www.instagram.com/reels/DakPUjsze0w/"],
+      ["Instagram video 9","https://www.instagram.com/reels/DbDXDdkpziX/"],
+      ["Instagram video 10","https://www.instagram.com/reel/DbA9gv6J5Hj/?igsh=OGNoaWU0aDh4N3Rn"],
+      ["Instagram video 11","https://www.instagram.com/reel/DbGKmyETxz1/?igsh=cGV3MjJzbmFrZ2Nw"],
+      ["Instagram video 12","https://www.instagram.com/reel/DbVBM6hOSvu/"],
+      ["Instagram video 13","https://www.instagram.com/reel/DbYkz8IBy5O/?igsh=bDNxcjA5YnJ6dngw"],
+      ["Instagram video 14","https://www.instagram.com/reels/DbdS-vuzlsb/"],
+      ["Instagram video 15","https://www.instagram.com/reels/Db3HvixzCCO/"],
+      ["Instagram video 16","https://www.instagram.com/reels/DclXuZ1v8mt/"],
+      ["Instagram video 17","https://www.instagram.com/reel/DcnDspmyZsU/"],
+      ["Instagram video 18","https://www.instagram.com/reel/DdG6y4LxDne/?stkn=eXliY2p4eTJvYnV5"],
+      ["Instagram video 19","https://www.instagram.com/reels/DdW_by5TM5R/"],
+      ["Instagram video 20","https://www.instagram.com/reels/DdeG27RSCN5/"],
+      ["Instagram video 21","https://www.instagram.com/reel/DdlyV8TTopj/?stkn=MW5jZmt0Y25qYnNqZw=="],
+      ["Instagram video 22","https://www.instagram.com/reel/Dd9GcAkTyPC/?stkn=emUyMjJrOWpnZXZ1"],
+      ["Instagram video 23","https://www.instagram.com/reel/DeCL8ccoVku/"],
+      ["Instagram video 24","https://www.instagram.com/reel/DeBx1cehFeX/?stkn=azRxZjQ0ZzA3ejBu"]
+    ]
+  },
+  youtube: {
+    title:"YouTube Shorts",
+    description:"Selected creator-led short-form videos.",
+    links:[
+      ["YouTube Short 1","https://www.youtube.com/shorts/8I1dvvzvp9A"],
+      ["YouTube Short 2","https://www.youtube.com/shorts/7utTex5iQ3Y"]
+    ]
+  }
+};
+
+const modal=document.getElementById("galleryModal");
+const modalTitle=document.getElementById("modalTitle");
+const modalDescription=document.getElementById("modalDescription");
+const modalLinks=document.getElementById("modalLinks");
+const modalClose=document.getElementById("modalClose");
+let lastFocused=null;
+
+function openGallery(key,trigger){
+  const data=galleries[key];
+  if(!data)return;
+  lastFocused=trigger||document.activeElement;
+  modalTitle.textContent=data.title;
+  modalDescription.textContent=data.description;
+  modalLinks.replaceChildren();
+  data.links.forEach(([label,url])=>{
+    const link=document.createElement("a");
+    link.className="gallery-link";
+    link.href=url;
+    link.target="_blank";
+    link.rel="noopener noreferrer";
+    const name=document.createElement("span");
+    name.textContent=label;
+    const arrow=document.createElement("span");
+    arrow.textContent="↗";
+    link.append(name,arrow);
+    modalLinks.appendChild(link);
+  });
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+  document.body.classList.add("modal-open");
+  modalClose.focus();
+}
+function closeGallery(){
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden","true");
+  document.body.classList.remove("modal-open");
+  if(lastFocused)lastFocused.focus();
+}
+document.querySelectorAll(".open-gallery").forEach(button=>{
+  button.addEventListener("click",()=>openGallery(button.dataset.gallery,button));
+});
+modalClose.addEventListener("click",closeGallery);
+modal.addEventListener("click",event=>{if(event.target===modal)closeGallery()});
+document.addEventListener("keydown",event=>{
+  if(event.key==="Escape"&&modal.classList.contains("open"))closeGallery();
+});
+
+const menuToggle=document.getElementById("menuToggle");
+const navLinks=document.getElementById("navLinks");
+menuToggle.addEventListener("click",()=>{
+  const open=navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded",String(open));
+});
+navLinks.querySelectorAll("a").forEach(link=>link.addEventListener("click",()=>{
+  navLinks.classList.remove("open");
+  menuToggle.setAttribute("aria-expanded","false");
+}));
+
+const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const revealItems=document.querySelectorAll(".reveal");
+const chart=document.getElementById("expertiseChart");
+
+if("IntersectionObserver" in window&&!reducedMotion){
+  const revealObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
       }
-    };
-
-    // Gallery modal
-    const modal = document.getElementById("galleryModal");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalDescription = document.getElementById("modalDescription");
-    const modalLinks = document.getElementById("modalLinks");
-    const modalClose = document.getElementById("modalClose");
-    let lastFocused = null;
-
-    function openGallery(key, trigger) {
-      const data = galleries[key];
-      if (!data) return;
-
-      lastFocused = trigger || document.activeElement;
-      modalTitle.textContent = data.title;
-      modalDescription.textContent = data.description;
-      modalLinks.replaceChildren();
-
-      data.links.forEach(([label, url]) => {
-        const link = document.createElement("a");
-        link.className = "gallery-link";
-        link.href = url;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-
-        const name = document.createElement("span");
-        name.textContent = label;
-
-        const arrow = document.createElement("span");
-        arrow.textContent = "↗";
-
-        link.append(name, arrow);
-        modalLinks.appendChild(link);
-      });
-
-      modal.classList.add("open");
-      modal.setAttribute("aria-hidden", "false");
-      document.body.classList.add("modal-open");
-      modalClose.focus();
-    }
-
-    function closeGallery() {
-      modal.classList.remove("open");
-      modal.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("modal-open");
-      if (lastFocused) lastFocused.focus();
-    }
-
-    document.querySelectorAll(".open-gallery").forEach(button => {
-      button.addEventListener("click", () => {
-        openGallery(button.dataset.gallery, button);
-      });
     });
-
-    modalClose.addEventListener("click", closeGallery);
-
-    modal.addEventListener("click", event => {
-      if (event.target === modal) closeGallery();
-    });
-
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape" && modal.classList.contains("open")) {
-        closeGallery();
+  },{threshold:.12});
+  revealItems.forEach(item=>revealObserver.observe(item));
+  const chartObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        chart.classList.add("is-visible");
+        chartObserver.unobserve(chart);
       }
     });
+  },{threshold:.35});
+  chartObserver.observe(chart);
+}else{
+  revealItems.forEach(item=>item.classList.add("is-visible"));
+  chart.classList.add("is-visible");
+}
 
-    // Mobile navigation
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    // Scroll reveal and animated pie chart
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const revealItems = document.querySelectorAll(".reveal");
-    const chart = document.getElementById("expertiseChart");
-
-    if ("IntersectionObserver" in window && !reducedMotion) {
-      const revealObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-
-      revealItems.forEach(item => revealObserver.observe(item));
-
-      const chartObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            chart.classList.add("is-visible");
-            chartObserver.unobserve(chart);
-          }
-        });
-      }, { threshold: 0.35 });
-
-      chartObserver.observe(chart);
-    } else {
-      revealItems.forEach(item => item.classList.add("is-visible"));
-      chart.classList.add("is-visible");
+function animateCount(element){
+  if(element.dataset.animated==="true")return;
+  element.dataset.animated="true";
+  const format=element.dataset.format;
+  const start=performance.now();
+  const duration=1000;
+  function tick(now){
+    const progress=Math.min((now-start)/duration,1);
+    const eased=1-Math.pow(1-progress,3);
+    if(format==="leads"){
+      element.textContent=progress===1?"1L+":Math.round(100*eased)+"K+";
+    }else if(format==="cpl"){
+      element.textContent=progress===1?"₹60–₹500":"₹60–₹"+Math.max(60,Math.round(500*eased));
+    }else if(format==="views"){
+      element.textContent=progress===1?"10M+":Math.round(10*eased)+"M+";
+    }else if(format==="adwisko"){
+      element.textContent=progress===1?"3L+":Math.round(300*eased)+"K+";
     }
-
-    // Count-up metrics. The final displayed values are reported outcomes.
-    function animateCount(element) {
-      if (element.dataset.animated === "true") return;
-      element.dataset.animated = "true";
-
-      const target = Number(element.dataset.target);
-      const format = element.dataset.format;
-      const start = performance.now();
-      const duration = 1000;
-
-      function tick(now) {
-        const progress = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const value = Math.round(target * eased);
-
-        if (format === "leads") {
-          element.textContent = value >= 100000
-            ? "1L+"
-            : Math.round(value / 1000) + "K+";
-        } else if (format === "cpl") {
-          element.textContent = progress < 1
-            ? "₹60–₹" + Math.max(60, Math.round(500 * eased))
-            : "₹60–₹500";
-        } else if (format === "views") {
-          element.textContent = value >= 10000000
-            ? "10M+"
-            : value >= 1000000
-              ? (value / 1000000).toFixed(1).replace(".0", "") + "M+"
-              : Math.round(value / 1000) + "K+";
-        } else if (format === "adwisko") {
-          element.textContent = value >= 300000
-            ? "3L+"
-            : Math.round(value / 1000) + "K+";
-        }
-
-        if (progress < 1) requestAnimationFrame(tick);
-        else {
-          if (format === "leads") element.textContent = "1L+";
-          if (format === "cpl") element.textContent = "₹60–₹500";
-          if (format === "views") element.textContent = "10M+";
-          if (format === "adwisko") element.textContent = "3L+";
-        }
+    if(progress<1)requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const metricEls=document.querySelectorAll(".count-up");
+if("IntersectionObserver" in window&&!reducedMotion){
+  const metricObserver=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        animateCount(entry.target);
+        metricObserver.unobserve(entry.target);
       }
-
-      requestAnimationFrame(tick);
-    }
-
-    const metricEls = document.querySelectorAll(".count-up");
-
-    if ("IntersectionObserver" in window && !reducedMotion) {
-      const metricObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            animateCount(entry.target);
-            metricObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.5 });
-
-      metricEls.forEach(element => metricObserver.observe(element));
-    } else {
-      metricEls.forEach(element => {
-        const format = element.dataset.format;
-        if (format === "leads") element.textContent = "1L+";
-        if (format === "cpl") element.textContent = "₹60–₹500";
-        if (format === "views") element.textContent = "10M+";
-        if (format === "adwisko") element.textContent = "3L+";
-      });
-    }
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    });
+  },{threshold:.5});
+  metricEls.forEach(el=>metricObserver.observe(el));
+}
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
 </body>
 </html>
